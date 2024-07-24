@@ -1,0 +1,52 @@
+.upperLeftSide {
+    background: #27283C;
+    width: 45%;
+    height: 472px;
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.upperRightSide {
+    background-color: #27283C;
+    width: 55%;
+    height: 472px;
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.upperLeftSide h1,
+.upperRightSide h1,
+.lowerLeftSide h1,
+.lowerRightSide h1 {
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.upperContainer,
+.lowerContainer {
+    display: flex;
+    gap: 20px;
+}
+
+.lowerContainer {
+    margin-top: 20px;
+}
+
+.lowerLeftSide {
+    background: #27283C;
+    padding: 20px;
+    border-radius: 14px;
+    height: 472px;
+    width: 55%;
+}
+
+.lowerRightSide {
+    background: #27283C;
+    padding: 20px;
+    border-radius: 14px;
+    height: 472px;
+    width: 45%;
+}

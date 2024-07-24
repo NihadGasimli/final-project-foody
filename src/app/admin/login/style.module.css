@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #1e1e30;
+}
+
+.logo {
+    width: 102px;
+    height: 22px;
+    margin: 20px;
+}
+
+.loginPanel {
+    background-color: #38394E;
+    max-width: 810px;
+    height: 411px;
+    margin: 0px auto;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.loginPanelImage {
+    width: 346px;
+    height: 303px;
+}
+
+.rightSide {
+    width: 50%;
+    height: 411px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftSide {
+    width: 50%;
+    height: 411px;
+    background-color: #38394E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.leftSide h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 35px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #C7C7C7;
+}
+
+.leftSide button {
+    width: 80%;
+    height: 50px;
+    background-color: #C035A2;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    border: 0;
+    cursor: pointer;
+    transition: 0.9s all;
+}
+
+.leftSide button:hover {
+    background-color: #fff;
+    color: #C035A2;
+    border: 2px solid #C035A2;
+}
+
+.leftSide input {
+    width: 80%;
+    height: 50px;
+    background-color: #5A5B70;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    border: 0;
+    padding: 10px 30px;
+    color: #fff;
+}
+
+.leftSide input::placeholder {
+    color: #C7C7C7;
+
+}

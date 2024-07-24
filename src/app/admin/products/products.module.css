@@ -1,0 +1,103 @@
+.heading {
+    background-color: #27283C;
+    height: 73px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    border-radius: 14px;
+}
+
+.heading h1 {
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    line-height: 24px;
+    color: #C7C7C7;
+    cursor: default;
+}
+
+.products {
+    display: flex;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.productItem {
+    background-color: #fff;
+    width: 196px;
+    height: 273px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 7px;
+    padding: 20px 10px;
+    cursor: pointer;
+    transition: 0.2s all;
+}
+
+.productItem:hover {
+    width: 200px;
+    height: 277px;
+}
+
+.productImage {
+    width: 80%;
+    align-self: center;
+}
+
+.loadingGif {
+    width: 150px;
+    height: 150px;
+    margin: 0px auto;
+    background-color: transparent;
+}
+
+.lowerDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.editButton,
+.deleteButton {
+    cursor: pointer;
+}
+
+.editButton:hover,
+.deleteButton:hover {
+    background-color: #C7C7C7;
+    border-radius: 2px;
+}
+
+.editDiv {
+    display: flex;
+    gap: 5px;
+}
+
+.productName {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.restName {
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: #8E8E93;
+    cursor: pointer;
+}
+
+.restName:hover {
+    text-decoration: underline;
+}
+
+.productPrice {
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: #00B2A9;
+}
