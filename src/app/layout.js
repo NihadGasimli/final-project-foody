@@ -10,6 +10,7 @@ import { store } from "../app/store/store";
 // };
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
       <body>

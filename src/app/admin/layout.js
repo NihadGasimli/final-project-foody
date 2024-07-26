@@ -11,7 +11,6 @@ export default function RootLayout({ children }) {
     const [whichPage, setWhichPage] = useState("");
     const router = useRouter();
     const info = useSelector((state) => state.info);
-    const [languageIsOpen, setLanguageIsOpen] = useState(false);
 
     useEffect(() => {
         setWhichPage(info?.page);

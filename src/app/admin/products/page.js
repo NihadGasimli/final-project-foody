@@ -6,23 +6,40 @@ import styles from "./products.module.css";
 import { Dropdown } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-
+import Delete from "../../../../components/Delete"
 export default function Products() {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [openDeleteModal, setOpenDeleteModal] = useState(false);
+    const [deletingProductId, setDeletingProductId] = useState("");
+    const [closingDeleteModal, setClosingDeleteModal] = useState(false);
 
-    useEffect(() => {
+    function getProducts() {
         fetch("/api/products")
             .then((response) => response.json())
             .then((result) => {
                 setProducts(result.result.data);
                 setLoading(false);
             });
+    }
+
+    useEffect(() => {
+        getProducts();
     }, []);
+
+    useEffect(() => {
+        if (openDeleteModal) {
+            document.body.classList.add(styles.hiddenOverflow)
+        }
+        else {
+            document.body.classList.remove(styles.hiddenOverflow)
+
+        }
+    })
 
     const dispatch = useDispatch();
     dispatch(setPage("products"));
-
+    
     return (
         <>
             <div className={styles.container}>
@@ -73,14 +90,20 @@ export default function Products() {
                                             width={20}
                                             height={20}
                                             alt="delete"
+                                            onClick={() => { setOpenDeleteModal(true), setDeletingProductId(item.id) }}
                                         />
-
                                     </div>
                                 </div>
                             </div>
                         ))
                     )}
                 </div>
+                {openDeleteModal && (
+                    <div className={styles.modalOverlay}>
+                        <Delete id={deletingProductId} setClosing={setOpenDeleteModal} />
+                    </div>
+                )}
+
             </div>
 
         </>
