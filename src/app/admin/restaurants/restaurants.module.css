@@ -1,0 +1,122 @@
+.heading {
+    background-color: #27283C;
+    height: 73px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    border-radius: 14px;
+}
+
+.heading h1 {
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    line-height: 24px;
+    color: #C7C7C7;
+    cursor: default;
+}
+
+.restaurantTypeDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.restaurantTypeDiv h2 {
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    line-height: 24px;
+    color: #C7C7C7;
+    cursor: default;
+}
+
+.loadingGif {
+    width: 150px;
+    height: 150px;
+    margin: 0px auto;
+    background-color: transparent;
+}
+
+.restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.restaurantItem {
+    min-width: 247px;
+    height: 83px;
+    gap: 10px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+
+.rightDivItem h2 {
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    line-height: 24px;
+    color: #1E1E30;
+    margin: 0;
+}
+
+.rightDivItem p {
+    margin: 0;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    line-height: 24px;
+    color: #828282;
+}
+
+.restaurantImage {
+    min-width: 65px;
+    height: 57px;
+    border-radius: 5px;
+}
+
+.rightEditAndDeleteDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding-left: 10px;
+}
+
+.editButton,
+.deleteButton {
+    cursor: pointer;
+}
+
+.editButton:hover,
+.deleteButton:hover {
+    background-color: #C7C7C7;
+    border-radius: 2px;
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hiddenOverflow {
+    overflow: hidden;
+}

@@ -1,4 +1,4 @@
-import "@/app/global.css";
+import "../../../app/global.css";
 
 export const metadata = {
     title: "Admin | Foody",

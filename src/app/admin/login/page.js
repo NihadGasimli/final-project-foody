@@ -1,9 +1,9 @@
+"use client"
+
 import styles from "./style.module.css";
 import Image from "next/image";
 
 export default function AdminLogin() {
-
-
     return (
         <>
             <div className={styles.container}>
@@ -30,7 +30,6 @@ export default function AdminLogin() {
                             alt="image"
                         />
                     </div>
-
                 </div>
             </div>
         </>

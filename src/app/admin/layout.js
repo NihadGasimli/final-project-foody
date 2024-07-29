@@ -4,21 +4,40 @@ import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import AddProduct from "../../../components/AddProduct";
 import { Button, Dropdown, DropdownButton } from "react-bootstrap";
 import styles from "./layout.module.css";
 
 export default function RootLayout({ children }) {
     const [whichPage, setWhichPage] = useState("");
     const router = useRouter();
+    const [addProductModalOpened, setAddProductModalOpened] = useState(false);
     const info = useSelector((state) => state.info);
 
     useEffect(() => {
         setWhichPage(info?.page);
     }, [info]);
 
+    useEffect(() => {
+        if (addProductModalOpened) {
+            document.body.classList.add(styles.hiddenOverflow)
+        }
+        else {
+            document.body.classList.remove(styles.hiddenOverflow)
+        }
+    })
+
     return (
         <html lang="en">
             <body className={styles.body}>
+
+                {addProductModalOpened && (
+                    <div className={styles.modalOverlay}>
+                        <AddProduct setClosing={setAddProductModalOpened} />
+                    </div>
+                )
+                }
+
                 <header className={styles.header}>
                     <nav className={styles.navbar}>
                         <Image
@@ -29,7 +48,7 @@ export default function RootLayout({ children }) {
                             alt="Logo"
                         />
 
-                        <button className={styles.addProductButton}>+ ADD PRODUCT</button>
+                        <button className={styles.addProductButton} onClick={() => { setAddProductModalOpened(true) }}>+ ADD PRODUCT</button>
 
                         {/* <div className={styles.languagesDiv}>
                             <Image
