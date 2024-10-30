@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 70px;
+    padding-bottom: 200px;
+}
+
+.container h1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0.15000000596046448px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+.accordionItem {
+    width: 1041px;
+    box-shadow: 0px 3px 8px -2px #00000033;
+}
+
+.accordionItem button {
+    width: 1041px;
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0.15000000596046448px;
+    text-align: left;
+    color: #000;
+    margin: 2px 0px;
+}
+
+.accordionBody {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0.15000000596046448px;
+    text-align: left;
+    color: #828282;
+    padding: 20px;
+}

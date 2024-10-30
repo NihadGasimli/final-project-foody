@@ -1,11 +1,23 @@
-import styles from "./success.module.css";
+import { useState, useEffect } from 'react';
+import styles from "./success.module.css" // Assuming you're using CSS modules
 
-export default function SuccessMessage() {
+const SuccessMessage = ({ message }) => {
+    const [visible, setVisible] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setVisible(false);
+        }, 3000); // Hide after 3 seconds
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
-        <>
-            <div className={styles.main}>
-                <h1>Success!</h1>
+        visible && (
+            <div className={styles.successMessage}>
+                {message}
             </div>
-        </>
-    )
-}
+        )
+    );
+};
+
+export default SuccessMessage;

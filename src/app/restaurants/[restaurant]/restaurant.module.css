@@ -1,0 +1,761 @@
+.container {
+    width: 95%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    min-height: 500px;
+}
+
+.loadingGif {
+    width: 220px;
+    height: 220px;
+    margin: 100px auto;
+    background-color: transparent;
+}
+
+.infoDiv {
+    width: 90%;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.infoDiv .infoImage {
+    width: 25%;
+    height: 100%;
+    margin: 0px 150px 0px 100px;
+}
+
+.infoDiv .rightSide {
+    min-width: 30%;
+    height: 80%;
+}
+
+.infoDiv .rightSide .cuisineAndDeliveryDiv {
+    display: flex;
+    justify-content: space-between;
+    margin-right: auto;
+}
+
+.infoDiv .rightSide .cuisineAndDeliveryDiv .deliveryAndGoBackDiv {
+    display: flex;
+    gap: 20px;
+}
+
+.infoDiv .rightSide .cuisineAndDeliveryDiv h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 70px;
+    letter-spacing: 0.03em;
+    padding: 0;
+    margin: 0;
+    color: #828282;
+}
+
+.infoDiv .rightSide .cuisineAndDeliveryDiv h3 {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    border: 1px solid #D63626;
+    color: #D63626;
+    width: 72px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    align-self: flex-end;
+}
+
+.infoDiv .rightSide .cuisineAndDeliveryDiv p {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    color: #000;
+
+}
+
+.infoDiv .rightSide .cuisineAndDeliveryDiv .goBackButton {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    color: #fff;
+    width: 72px;
+    height: 52px;
+    border-radius: 5px;
+    background-color: #D63626;
+    border: 0;
+    align-self: flex-end;
+    transition: 0.2s all;
+}
+
+.infoDiv .rightSide .cuisineAndDeliveryDiv .goBackButton:hover {
+    background-color: #9a190e;
+}
+
+.infoDiv .rightSide .nameAndAddressDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.infoDiv .rightSide .nameAndAddressDiv h1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    padding: 0;
+    margin: 0;
+}
+
+.infoDiv .rightSide .nameAndAddressDiv p {
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    color: #828282;
+    padding: 0;
+    margin: 0;
+}
+
+.productsAndBasketDiv {
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    gap: 30px;
+}
+
+.productsDiv {
+    width: 70%;
+    min-height: 700px;
+    background-color: #F3F4F6;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.productsDiv h1 {
+    margin: 0px auto;
+    font-family: "Roboto", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+.product {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 99px;
+}
+
+.product .productImage {
+    width: 57px;
+    height: 53px;
+}
+
+.product .leftSide {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.product .leftSide .productTexts h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+}
+
+.product .leftSide .productTexts p {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    color: #828282;
+}
+
+.product .rightSide {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product .rightSide p {
+    height: 25px;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    color: #828282;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    gap: 5px;
+}
+
+.product .rightSide .productPrice {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 70px;
+    letter-spacing: 0.03em;
+    color: #000;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product .rightSide .addProductButton {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #828282;
+    color: #828282;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product .rightSide .addProductButton:hover {
+    background-color: #6FCF97;
+    color: #fff;
+    border: 0;
+}
+
+.product .leftSide,
+.product .rightSide {
+    display: flex;
+}
+
+.product p {
+    color: #000;
+}
+
+
+.basketDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 600px;
+    background-color: #F3F4F6;
+}
+
+.basketDiv .noItemsDiv .topDivBasket {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.basketDiv .noItemsDiv .topDivBasket p {
+    padding-top: 20px;
+}
+
+.basketDiv .noItemsDiv .centeredDivBasket {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.basketDiv .noItemsDiv .centeredDivBasket .logo {
+    width: 263px;
+    height: 236px;
+}
+
+.basketDiv .noItemsDiv .centeredDivBasket p {
+    font-family: "Roboto", sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 50px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    width: 285px;
+    color: #BDBDBD;
+}
+
+.basketDiv .noItemsDiv .bottomDivBasket {
+    background-color: #BDBDBD;
+    width: 90%;
+    height: 55px;
+    border-radius: 100px;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px 0px 20px;
+    cursor: pointer;
+}
+
+.basketDiv .noItemsDiv .bottomDivBasket p {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 70px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: #fff;
+}
+
+.basketDiv .noItemsDiv .bottomDivBasket h2 {
+    margin: 0;
+    padding: 0;
+    width: 40%;
+    height: 50px;
+    border-radius: 100px;
+    background-color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 70px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: #BDBDBD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.basketDiv .noItemsDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 96%;
+}
+
+.basketDiv .itemsDiv {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.basketDiv .itemsDiv hr {
+    width: 95%;
+    margin: 15px auto;
+}
+
+.basketDiv .itemsDiv .topDivBasket {
+    display: flex;
+    justify-content: space-between;
+}
+
+.basketDiv .itemsDiv .topDivBasket .leftSide {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+
+}
+
+.basketDiv .itemsDiv .topDivBasket p {
+    padding-top: 25px;
+    color: #D63626;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+}
+
+.basketDiv .itemsDiv .topDivBasket .deleteLogo {
+    width: 30px;
+    height: 30px;
+    margin: 20px 20px 0px 0px;
+    cursor: pointer;
+}
+
+.basketDiv img {
+    width: 35px;
+    height: 35px;
+}
+
+.basketItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 70px;
+    padding: 0 10px;
+}
+
+.basketItem .logo {
+    width: 60px;
+    height: 45px;
+    border-radius: 5px;
+}
+
+.basketItem .nameAndPriceDiv {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.basketItem .nameAndPriceDiv h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    width: 224px;
+    margin: 0;
+    padding: 0;
+}
+
+.basketItem .nameAndPriceDiv p {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    margin: 0;
+    padding: 0;
+}
+
+.basketItem .itemCountDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 29px;
+    height: 70px;
+    border-radius: 50px;
+    padding: 0;
+    margin-left: auto;
+}
+
+.basketItem .itemCountDiv p {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    color: #000;
+}
+
+.basketItem .itemCountDiv button {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    color: #000;
+    border: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.basketDiv .itemsDiv .bottomDiv {
+    background-color: #D63626;
+    width: 95%;
+    height: 55px;
+    border-radius: 100px;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 2px 0px 20px;
+    justify-self: flex-end;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.basketDiv .itemsDiv .bottomDiv p {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 70px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: #fff;
+}
+
+.basketDiv .itemsDiv .bottomDiv h2 {
+    margin: 0;
+    padding: 0;
+    width: 40%;
+    height: 50px;
+    border-radius: 100px;
+    background-color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 70px;
+    letter-spacing: 0.03em;
+    color: #D63626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basketDiv .items {
+    height: 420px;
+    overflow: auto;
+}
+
+.hiddenOverflow {
+    overflow: hidden;
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobileBottomDiv {
+    display: none;
+}
+
+.hiddenOverflow {
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .infoDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .infoDiv .infoImage {
+        width: 60%;
+        margin: 0;
+    }
+
+    .infoDiv .rightSide {
+        width: 95%;
+        margin-top: 20px;
+    }
+
+    .infoDiv .rightSide .nameAndAddressDiv h1 {
+        font-size: 15px;
+    }
+
+    .infoDiv .rightSide .nameAndAddressDiv p {
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .infoDiv .rightSide .cuisineAndDeliveryDiv {
+        margin-top: 20px;
+    }
+
+    .infoDiv .rightSide .cuisineAndDeliveryDiv .cuisineDiv h2,
+    .infoDiv .rightSide .cuisineAndDeliveryDiv .cuisineDiv p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .infoDiv .rightSide .cuisineAndDeliveryDiv .deliveryAndGoBackDiv {
+        gap: 5px;
+    }
+
+    .infoDiv .rightSide .cuisineAndDeliveryDiv .deliveryAndGoBackDiv h3,
+    .infoDiv .rightSide .cuisineAndDeliveryDiv .deliveryAndGoBackDiv .goBackButton {
+        width: 61px;
+        height: 44px;
+    }
+
+    .productsAndBasketDiv {
+        margin-top: 50px;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .productsAndBasketDiv h1 {
+        font-size: 19px;
+    }
+
+    .productsDiv {
+        width: 100%;
+        min-height: 400px;
+    }
+
+    .productsDiv .productImage {
+        display: none;
+    }
+
+    .productsDiv .product {
+        gap: 0px;
+    }
+
+    .productsDiv .product .leftSide {
+        margin: 0;
+        padding: 0;
+        width: fit-content;
+    }
+
+    .productsDiv .product .rightSide {
+        margin: 0;
+        padding: 0;
+        gap: 10px;
+        width: fit-content;
+    }
+
+    .productsDiv .product .leftSide .productTexts h2 {
+        font-size: 14px;
+    }
+
+    .productsDiv .product .leftSide .productTexts p {
+        font-size: 12px;
+        width: 200px;
+    }
+
+    .productsDiv .product .rightSide p {
+        font-size: 14px;
+    }
+
+    .productsDiv .product .rightSide span {
+        font-size: 14px;
+    }
+
+    .productsDiv .product .rightSide .addProductButton {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    .productsDiv .mobileBottomDiv {
+        background-color: #D63626;
+        width: 100%;
+        height: 41px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5px 0px 20px;
+        border-radius: 100px;
+        position: absolute;
+        bottom: 10px;
+        cursor: pointer;
+    }
+
+    .productsDiv .mobileBottomDiv .leftSide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        height: 100%;
+    }
+
+    .productsDiv .mobileBottomDiv .leftSide p {
+        font-family: "Roboto", sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.03em;
+        color: #fff;
+        margin: 0;
+    }
+
+    .productsDiv .mobileBottomDiv .leftSide img {
+        width: 19px;
+        height: 17px;
+    }
+
+    .productsDiv .mobileBottomDiv .rightSide {
+        width: 79px;
+        height: 36px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+    }
+
+    .productsDiv .mobileBottomDiv .rightSide h2 {
+        font-family: "Roboto", sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 21px;
+        letter-spacing: 0.03em;
+        text-align: left;
+        color: #D63626;
+        margin: 0;
+    }
+
+    .productsAndBasketDiv .basketDiv {
+        position: absolute;
+        width: 100%;
+        height: 508px;
+        bottom: 0;
+        left: 0;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .itemsDiv .items {
+        height: 300px;
+        overflow-y: scroll;
+    }
+
+    .basketDiv .itemsDiv {
+        position: relative;
+    }
+
+    .basketDiv .itemsDiv .bottomDiv {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .basketDiv .noItemsDiv .topDivBasket .closeBasketButton{
+        margin-left: 60px;
+    }
+
+    .closeBasketButton {
+        width: 35px;
+        height: 35px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    .modalOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

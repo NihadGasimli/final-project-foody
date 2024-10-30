@@ -1,0 +1,267 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    gap: 30px;
+    padding-top: 30px;
+}
+
+.header {
+    width: 95%;
+    background-color: #EB5757;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+.dropdown {
+    position: relative;
+    font-family: Arial, sans-serif;
+    border: 0;
+    cursor: pointer;
+}
+
+.dropdown_content {
+    padding: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    z-index: 99;
+    border-radius: 5px;
+    width: 100%;
+    transition: opacity 0.7s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.logo {
+    width: 134px;
+    height: 52px;
+}
+
+.main {
+    width: 95%;
+    display: flex;
+}
+
+.leftSide {
+    width: 50%;
+    height: 600px;
+    background-color: #EB5757;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftSide .loginPhoto,
+.leftSide .registerPhoto {
+    width: 80%;
+    height: 100%;
+}
+
+.rightSide {
+    width: 50%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rightSide .topDiv {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.rightSide .topDiv div {
+    display: flex;
+    gap: 50px;
+    z-index: 99;
+}
+
+.rightSide .line {
+    height: 2px;
+    width: 200px;
+    margin-top: 15px;
+    transition: 0.3s all;
+    background-color: #EB5757;
+    transition: transform 0.3s ease-in-out;
+}
+
+.rightSide .lineLogin {
+    width: 100px;
+    transform: translateX(0);
+}
+
+.rightSide .lineRegister {
+    width: 180px;
+    transform: translateX(65%);
+}
+
+.rightSide .topDiv button {
+    background-color: transparent;
+    border: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: #4F4F4F;
+    padding: 0;
+    margin: 0;
+    transition: 0.3s ease-in;
+}
+
+.rightSide .topDiv button:active {
+    background-color: #4F4F4F;
+}
+
+.rightSide .topDiv div .loginPart {
+    padding-left: 15px;
+}
+
+.rightSide .topDiv .redText {
+    color: #EB5757;
+}
+
+.rightSide .inputsDiv {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.rightSide .inputsDiv .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.rightSide .inputs .labelAndErrorDiv {
+    display: flex;
+    justify-content: space-between;
+    height: 25px;
+}
+
+.rightSide .inputs .labelAndErrorDiv p {
+    color: red;
+}
+
+.rightSide .inputsDiv label {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: #4F4F4F;
+}
+
+.rightSide .inputsDiv .inputs .input {
+    background-color: #FFE6E6;
+    border: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    width: 100%;
+    height: 58px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.rightSide .confirmButton {
+    width: 100%;
+    height: 68px;
+    border: 0;
+    background-color: #EB5757;
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.rightSide .passwordDiv .eyeImage {
+    position: absolute;
+    right: 0;
+    padding-right: 10px;
+    width: 42px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.rightSide .passwordDiv {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .header {
+        width: 95%;
+        padding: 15px 20px;
+        margin: 0;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    .leftSide {
+        width: 100%;
+        height: 160px;
+    }
+
+    .leftSide .loginPhoto {
+        width: 100%;
+        height: 230px;
+    }
+
+    .leftSide .registerPhoto {
+        width: 100%;
+        height: 160px;
+    }
+
+    .rightSide {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .rightSide .inputsDiv .inputs .input,
+    .confirmButton {
+        height: 50px;
+    }
+
+    .rightSide .topDiv .loginPart,
+    .rightSide .topDiv .registerPart {
+        font-size: 20px;
+    }
+
+    .rightSide .topDiv .line {
+        width: 95px;
+    }
+
+    .rightSide .inputsDiv .inputs .labelAndErrorDiv label {
+        font-size: 18px;
+    }
+
+    .rightSide .confirmButton {
+        font-size: 18px;
+    }
+}

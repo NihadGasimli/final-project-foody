@@ -1,0 +1,1100 @@
+.container {
+    display: flex;
+    width: 95%;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+.container .leftSideContainer {
+    width: 30%;
+    height: 515px;
+    background-color: #F3F4F6;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 30px;
+    gap: 5px;
+}
+
+.container .rightSideContainer {
+    width: 100%;
+}
+
+.container .leftSideContainer .asideMenuItem {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 15px 0px 15px 15px;
+    width: 233px;
+}
+
+.container .leftSideContainer .selectedPage {
+    background-color: #d6352623;
+    border-radius: 5px;
+}
+
+
+.container .leftSideContainer .asideMenuItem .logo {
+    width: 24px;
+    height: 24px;
+}
+
+.container .leftSideContainer .asideMenuItem a {
+    font-family: "Mukta", system-ui;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    color: #000;
+}
+
+.container .leftSideContainer .selectedPage a {
+    font-family: "Mukta", system-ui;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    color: #d63626;
+}
+
+.container .leftSideContainer .selectedPage .logo {
+    background-color: rgba(214, 53, 38, 0.101);
+    border-radius: 50%;
+    padding: 5px;
+    width: 29px;
+    height: 29px;
+}
+
+.container .rightSideCheckout {
+    width: 70%;
+    height: 601px;
+    display: flex;
+    position: relative;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    padding-bottom: 0;
+    width: 100%;
+    height: 601px;
+}
+
+.main h1 {
+    font-family: "Mukta", system-ui;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: #4F4F4F;
+}
+
+.mainBasket {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    padding-bottom: 0;
+    width: 100%;
+    height: 601px;
+}
+
+.mainBasket h1 {
+    font-family: "Mukta", system-ui;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: #4F4F4F;
+}
+
+
+.uploadImageDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.uploadImage {
+    display: flex;
+    width: 146px;
+    height: 146px;
+    background-color: #fff;
+    border-radius: 100%;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.uploadImage .logo {
+    width: 60px;
+    height: 60px;
+}
+
+.uploadImage p {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: #929292;
+}
+
+.inputsDiv {
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.inputsDiv .leftSide,
+.inputsDiv .rightSide {
+    background-color: transparent;
+    width: 50%;
+    padding: 0;
+    margin: 0;
+    gap: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputsDiv label {
+    font-family: "Mukta", system-ui;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding-top: 10px;
+    color: #4F4F4F;
+}
+
+.inputsDiv input {
+    width: 90%;
+    height: 53px;
+    padding: 10px;
+}
+
+.inputsDiv .saveButton {
+    width: 90%;
+    height: 53px;
+    background-color: #6FCF97;
+    color: #fff;
+    border: 0;
+    margin-top: 35px;
+    font-family: "Mukta", system-ui;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.inputsDiv .saveButton:hover {
+    background-color: #3d9863;
+}
+
+.inputsDiv .contactInput::-webkit-inner-spin-button,
+.inputsDiv .contactInput::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.whenImageSelected {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.whenImageSelected .photo {
+    width: 70px;
+    height: 70px;
+}
+
+.deleteUploadedLogo {
+    cursor: pointer;
+}
+
+.basketDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.basketDiv .noItemsDiv .topDivBasket {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.basketDiv .noItemsDiv .topDivBasket p {
+    padding-top: 20px;
+}
+
+.basketDiv .noItemsDiv .centeredDivBasket {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.basketDiv .noItemsDiv .centeredDivBasket .logo {
+    width: 263px;
+    height: 236px;
+}
+
+.basketDiv .noItemsDiv .centeredDivBasket p {
+    font-family: "Roboto", sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 50px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    width: 285px;
+    color: #BDBDBD;
+}
+
+.basketDiv .noItemsDiv .bottomDivBasket {
+    background-color: #BDBDBD;
+    width: 90%;
+    height: 55px;
+    border-radius: 100px;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px 0px 20px;
+    cursor: pointer;
+}
+
+.basketDiv .noItemsDiv .bottomDivBasket p {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 70px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: #fff;
+}
+
+.basketDiv .noItemsDiv .bottomDivBasket h2 {
+    margin: 0;
+    padding: 0;
+    width: 40%;
+    height: 50px;
+    border-radius: 100px;
+    background-color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 70px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: #BDBDBD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basketDiv .noItemsDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 96%;
+}
+
+.basketDiv .itemsDiv {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.basketDiv .itemsDiv hr {
+    width: 95%;
+    margin: 15px auto;
+}
+
+.basketDiv .itemsDiv .topDivBasket {
+    display: flex;
+    justify-content: space-between;
+}
+
+.basketDiv .itemsDiv .topDivBasket .leftSideTopdiv {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.basketDiv .itemsDiv .topDivBasket p {
+    padding-top: 25px;
+    color: #D63626;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+}
+
+.basketDiv .itemsDiv .topDivBasket .deleteLogo {
+    width: 30px;
+    height: 30px;
+    margin: 20px 20px 0px 0px;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.basketDiv img {
+    width: 35px;
+    height: 35px;
+}
+
+.basketItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 70px;
+    padding: 0 10px;
+}
+
+.basketItem .logo {
+    width: 60px;
+    height: 45px;
+    border-radius: 5px;
+}
+
+.basketItem .nameAndPriceDiv {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.basketItem .nameAndPriceDiv h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    width: 224px;
+    margin: 0;
+    padding: 0;
+}
+
+.basketItem .nameAndPriceDiv p {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    margin: 0;
+    padding: 0;
+}
+
+.basketItem .itemCountDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 29px;
+    height: 70px;
+    border-radius: 50px;
+    padding: 0;
+    margin-left: auto;
+}
+
+.basketItem .itemCountDiv p {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    color: #000;
+}
+
+.basketItem .itemCountDiv button {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    color: #000;
+    border: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.basketDiv .itemsDiv .bottomDiv {
+    background-color: #D63626;
+    width: 95%;
+    height: 55px;
+    border-radius: 100px;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 2px 0px 20px;
+    justify-self: flex-end;
+    margin-bottom: 15px;
+    cursor: pointer;
+    margin-top: 35px;
+}
+
+.basketDiv .itemsDiv .bottomDiv p {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 70px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: #fff;
+}
+
+.basketDiv .itemsDiv .bottomDiv h2 {
+    margin: 0;
+    padding: 0;
+    width: 40%;
+    height: 50px;
+    border-radius: 100px;
+    background-color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 70px;
+    letter-spacing: 0.03em;
+    color: #D63626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basketDiv .items {
+    height: 330px;
+    overflow: auto;
+}
+
+.loadingGif {
+    width: 220px;
+    height: 220px;
+    margin: 0px auto;
+    background-color: transparent;
+}
+
+.mainCheckout {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    height: 601px;
+}
+
+.mainCheckout h1 {
+    font-family: "Mukta", system-ui;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: #4F4F4F;
+    padding: 30px 0px 0px 30px;
+
+}
+
+.mainCheckout .leftSideCheckout {
+    width: 65%;
+    height: 515px;
+    background-color: #F3F4F6;
+    display: flex;
+    flex-direction: column;
+}
+
+.deliveryInputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.deliveryInputs span {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 40px;
+}
+
+.deliveryInputs span p {
+    color: red;
+    padding: 0;
+    margin: 0;
+}
+
+.inputsDiv span {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 40px;
+}
+
+.inputsDiv span p {
+    color: red;
+    padding: 0;
+    margin: 0;
+}
+
+.deliveryInputs span label {
+    font-family: "Mukta", system-ui;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    align-self: flex-start;
+    padding-left: 30px;
+}
+
+.deliveryInputs input {
+    height: 53px;
+    width: 90%;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.deliveryInputs .radioButtons {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.deliveryInputs .radioButtons input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    outline: none;
+    color: #6FCF97;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.deliveryInputs .radioButtons input:checked {
+    background-color: #6FCF97;
+    border-color: #6FCF97;
+
+}
+
+.deliveryInputs .radioButtons label {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    cursor: pointer;
+}
+
+.deliveryInputs .radioButtons .wCardDiv,
+.deliveryInputs .radioButtons .wtCardDiv {
+    display: flex;
+    gap: 10px;
+}
+
+.deliveryInputs .radioButtons .wtCardDiv {
+    margin-right: 100px;
+}
+
+.checkoutButton {
+    width: 90%;
+    height: 53px;
+    background-color: #6FCF97;
+    color: #fff;
+    font-family: "Mukta", system-ui;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    margin: 40px auto;
+    border: 0;
+    border-radius: 4px;
+    z-index: 99;
+}
+
+.mainCheckout .rightSideCheckout {
+    width: 35%;
+    height: 372px;
+    background-color: #F3F4F6;
+    box-shadow: 0px 3px 8px -2px #00000033;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rightSideCheckout h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    margin-top: 20px;
+    color: #828282;
+}
+
+.noItemsDivCheckout {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.centeredDivBasketCheckout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.centeredDivBasketCheckout .logo {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.centeredDivBasketCheckout p {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-align: center;
+    width: 285px;
+    color: #BDBDBD;
+}
+
+.itemsDivCheckout {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+    position: relative;
+}
+
+.itemsDivCheckout .itemsCheckout {
+    height: 250px;
+    overflow: auto;
+    padding-right: 10px;
+    margin-bottom: 40px;
+
+}
+
+.itemsDivCheckout .itemsCheckout::-webkit-scrollbar {
+    width: 5px;
+}
+
+.itemsDivCheckout .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.itemsDivCheckout .item .itemCount {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    color: #828282;
+}
+
+.itemsDivCheckout .item .itemName {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    color: #4F4F4F;
+}
+
+.itemsDivCheckout .item .itemPrice {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+}
+
+.itemsDivCheckout .leftSideOfItem {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.itemsDivCheckout hr {
+    width: 100%;
+}
+
+.totalPriceDiv {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+.totalPriceDiv .totalPrice {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.totalPriceDiv p {
+    padding: 0;
+    margin: 0;
+}
+
+.totalPriceDiv h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.mainOrders {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    padding-bottom: 0;
+    width: 100%;
+    height: 601px;
+}
+
+.mainOrders h1 {
+    font-family: "Mukta", system-ui;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: #4F4F4F;
+}
+
+.mainOrders .tableDiv {
+    overflow: auto;
+    margin-top: 20px;
+}
+
+.mainOrders .tableDiv table {
+    width: 100%;
+    min-height: 450px;
+    background-color: #fff;
+}
+
+.mainOrders .tableDiv table th {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.mainOrders .tableDiv table th td {
+    width: 140px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainOrders .tableDiv table th td:nth-child(7) {
+    width: 60px;
+}
+
+.mainOrders .tableDiv table tr {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.mainOrders .tableDiv table tr td {
+    width: 140px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mainOrders .tableDiv table tr td:nth-child(7) {
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.mainOrders .tableDiv table hr {
+    padding: 0;
+    margin: 2px;
+}
+
+.showOrDeleteDiv {
+    display: flex;
+    width: 79px;
+    height: 47px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #fff;
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    z-index: 999;
+}
+
+.showOrDeleteDiv button {
+    width: 100%;
+    border: 0;
+    background-color: transparent;
+    font-family: "Mukta", system-ui;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    text-align: left;
+    padding-left: 10px;
+    transition: 0.2s all;
+}
+
+.showOrDeleteDiv button:hover {
+    background-color: #4F4F4F;
+}
+
+.showOrDeleteDiv .showButton {
+    color: #6FCF97;
+}
+
+.showOrDeleteDiv .deleteButton {
+    color: #eb5757;
+}
+
+.orderMoreDiv {
+    position: absolute;
+    left: 25%;
+    background-color: #fff;
+    z-index: 99;
+    width: 60%;
+    height: 433px;
+    padding-top: 50px;
+}
+
+.orderMoreDiv table {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+
+.orderMoreDiv table th {
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+.orderMoreDiv table th td {
+    width: 184.5px;
+    height: 54px;
+    text-align: center;
+}
+
+.orderMoreDiv table tr {
+    width: 90%;
+    display: flex;
+    position: relative;
+}
+
+.orderMoreDiv table tr td {
+    width: 184.5px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orderMoreDiv table hr {
+    width: 90%;
+    padding: 0;
+    margin: 2px;
+}
+
+.hiddenOverflow {
+    overflow: hidden;
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.successDiv {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #F3F4F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999999999;
+}
+
+.successDiv .successLogo {
+    width: 200px;
+    height: 200px;
+}
+
+.successDiv h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 35px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    width: 384px;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        position: relative;
+    }
+
+    .container .leftSideContainer {
+        position: absolute;
+        background-color: #fff;
+        width: 200px;
+        height: 200px;
+        padding: 0;
+        right: 0;
+        top: 50px;
+        z-index: 99999;
+        box-shadow: 0px 3px 8px 5px #00000033;
+    }
+
+    .container .leftSideContainer .selectedPage {
+        width: 100%;
+    }
+
+    .container .leftSideContainer .asideMenuItem a {
+        font-size: 16px;
+    }
+
+    .container .leftSideContainer .asideMenuItem {
+        padding: 5px;
+    }
+
+    .container .rightSideContainer {
+        width: 100%;
+        min-height: 800px;
+        background-color: #fff;
+    }
+
+    .uploadImage {
+        background-color: #828282;
+    }
+
+    .uploadImage p {
+        color: #6FCF97;
+    }
+
+    .main .inputsDiv {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+
+    .main .inputsDiv .leftSide {
+        width: 100%;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        height: auto;
+        align-items: center;
+    }
+
+    .main .inputsDiv .rightSide {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+    }
+
+    .hamburgerMenu {
+        position: absolute;
+        transform: scaleX(-1);
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+    }
+
+    .basketDiv .itemsDiv .items .basketItem {
+        padding: 0;
+        margin: 0;
+    }
+
+    .basketDiv .itemsDiv .items .nameAndPriceDiv {
+        width: 150px;
+    }
+
+    .basketDiv .itemsDiv .bottomDiv {
+        width: 100%;
+    }
+
+    .orderMoreDiv {
+        width: 100%;
+        left: 0;
+    }
+
+    .container .rightSideCheckout {
+        width: 100%;
+        height: 900px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mainCheckout {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .mainCheckout .leftSideCheckout {
+        width: 100%;
+    }
+
+    .mainCheckout .rightSideCheckout {
+        width: 100%;
+    }
+
+    .showOrDeleteDiv {
+        right: 0;
+    }
+
+}

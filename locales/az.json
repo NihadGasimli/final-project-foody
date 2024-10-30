@@ -1,0 +1,149 @@
+{
+    "header": {
+        "home": "Əsas",
+        "restaurants": "Restoranlar",
+        "aboutus": "Haqqımızda",
+        "howitworks": "Necə işləyir",
+        "faqs": "Ən çox verilən suallar",
+        "signup": "Qeydiyyat",
+        "profile": "Profil",
+        "basket": "Səbətiniz",
+        "orders": "Sifarişlər",
+        "checkout": "Ödəniş",
+        "logout": "Çıxış"
+    },
+    "homepage": {
+        "heading": "Yemək saytımız yerli yeməkləri tapmağı asanlaşdırır",
+        "description": "Fast food qida sənayesində sürətli, rahat yeməklər üçün geniş istifadə olunur. Bu, sürətinə və davamlılığına görə məşhurdur, hamburgerlər, kartof qızartması və içkilər kimi məhsulları əhatə edir.",
+        "registerButton": "Qeydiyyatdan keç",
+        "orderNowButton": "İndi sifariş et",
+        "features": "Xüsusiyyətlər",
+        "featuresDescription": "İncesənətimizlə dadın mənasını kəşf edin. Yeməklərimiz dad, tekstur və təqdimat arasında harmonik balans yaratmaq üçün kulinariya dəqiqliyi ilə hazırlanır.",
+        "firstCardHeading": "Endirim Kuponu",
+        "secondCardHeading": "Təzə sağlam qida",
+        "thirdCardHeading": "Sürətli Evə Çatdırılma",
+        "firstAdvertisement": "Həmişə sizi xoşbəxt edən menyu",
+        "secondAdvertisement": "Həmişə dadlı Papa John’s Pizzası. Razısan?",
+        "thirdAdvertisement": "Kartof qızartmasını sevirsiniz? Mmm...",
+        "popularFoodHeading": "Ən Məşhur Yenilənən Yeməklərimiz",
+        "popularFoodDescription": "Sulu steyklərdən təzə sushi rollarına qədər ən məşhur yeməklərimizi kəşf edin. İstər makaron, odunla bişirilmiş pizza, istərsə də zəngin desert axtarırsınızsa, menyumuzda hər kəs üçün bir şey var, rahat yeməyi yaradıcı dadlarla birləşdirir.",
+        "discoverDiv": "Sizin yanınızdakı Restoranları Kəşf Edin",
+        "discoverDivButton": "İndi Kəşf Et"
+    },
+    "restaurant": {
+        "cuisine": "Mətbəx",
+        "deliveryMin": "Çatdırılma",
+        "goBackButton": "Geri",
+        "products": "Məhsullar",
+        "items": "məhsul",
+        "basketEmpty": "Opps! Səbət boşdur",
+        "checkout": "Ödəniş"
+    },
+    "aboutus": {
+        "heading": "Haqqımızda",
+        "description": "Foody müştəriləri müxtəlif restoranlarla sürətli və rahat yemək çatdırılması üçün birləşdirən müasir və istifadəçi dostu bir veb saytdır. İstər yüngül bir qəlyanaltı, istərsə də doyumlu bir yemək istəyirsinizsə, Foody sizin üçündür. Yerli və beynəlxalq mətbəxlərin geniş seçimi ilə istifadəçilər menyuları araşdıra, sifariş verə və yeməklərini birbaşa qapılarına çatdırmaq imkanına malikdir. Foody, kiçik yerli yeməkxanalardan tutmuş məşhur şəbəkələrə qədər hər ölçüdə restoranlarla əməkdaşlıq edir, hər kəsin öz zövqünə uyğun bir şey tapmasını təmin edir. Real vaxt izləmə, asan ödəniş üsulları və fərdiləşdirilmiş tövsiyələr ilə Foody, aclığınızı istənilən vaxt və yerdə təmin etmək üçün mükəmməl platformadır.",
+        "hamburger": "Hamburger",
+        "pizza": "Kolbasa Pizzası",
+        "soup": "Pomidor Şorbası",
+        "coffee": "Papa Kofe"
+    },
+    "howitworks": {
+        "heading": "Necə işləyir",
+        "description": "Çatdırılma müddəti satış dövrlərində uzadıla bilər. Əraziniz üçün yenilənmiş təxmin üçün xahiş edirik ödəniş səhifəsinə baxın. Nəzərə alın ki, sifariş verdikdən sonra onu dəyişdirmək artıq mümkün deyil. Vergilər və rüsumlar bütün məhsul qiymətlərinə daxildir. Kredit kartı ilə ödəyərkən, sifarişi ev və ya hesab ünvanınızdan fərqli bir ünvana göndərmək mümkündür. Qeyd edək ki, Klarna ödənişləri sifarişin qeydiyyatdan keçmiş ev ünvanınıza göndərilməsini tələb edir."
+    },
+    "faq": {
+        "heading": "Tez-tez Verilən Suallar",
+        "firstQ": "Müştəri Xidmətləri ilə necə əlaqə saxlaya bilərəm?",
+        "firstA": "Müştəri Xidmətləri komandamız həftənin 7 günü fəaliyyət göstərir və bizimlə əlaqə qurmağın 2 yolu var: E-poçt və Çat. Biz tez cavab verməyə çalışırıq, buna görə cavab üçün çox gözləmək lazım deyil!",
+        "secondQ": "Veb mağazada mövcud olmayan məhsullar var.",
+        "secondA": "Əgər məhsulu veb mağazada tapa bilmirsinizsə, ehtimal ki, stokda yoxdur. Xahiş edirik, bir az sonra yenidən yoxlayın və ya daha ətraflı məlumat üçün bizimlə əlaqə saxlayın.",
+        "thirdQ": "Sifarişimi ləğv etmək istəyirəm.",
+        "thirdA": "Sifarişinizi ləğv etmək üçün xahiş edirik, sifariş tarixçəsinə keçin və ləğv seçimini seçin və ya müştəri xidməti ilə əlaqə saxlayın.",
+        "fourthQ": "Hansı ödəniş variantları mövcuddur?",
+        "fourhA": "Biz müxtəlif ödəniş variantlarını qəbul edirik, bunlara kredit/debit kartları, PayPal və bank köçürmələri daxildir."
+    },
+    "userpage": {
+        "menu": {
+            "profile": "Profil",
+            "basket": "Səbətiniz",
+            "orders": "Sifarişlər",
+            "checkout": "Ödəniş",
+            "logout": "Çıxış"
+        },
+        "profileHeading": "Profil",
+        "contact": "Əlaqə",
+        "email": "Email",
+        "username": "İstifadəçi adı",
+        "address": "Ünvan",
+        "fullname": "Tam ad",
+        "saveButton": "Saxla",
+        "uploadButton": "Yüklə",
+        "basketHeading": "Sizin səbətiniz",
+        "items": "məhsul",
+        "checkout": "Ödəniş",
+        "basketEmpty": "Oops! Səbət boşdur",
+        "ordersHeading": "Sizin sifarişləriniz",
+        "time": "Vaxt",
+        "deliveryAddress": "Çatdırılma ünvanı",
+        "amount": "Məbləğ",
+        "paymentMethod": "Ödəniş metodu",
+        "showButton": "Göstər",
+        "deleteButton": "Sil",
+        "image": "Şəkil",
+        "name": "Ad",
+        "price": "Qiymət $",
+        "count": "Ədəd",
+        "checkoutHeading": "Sifarişi təsdiqləmək",
+        "contactNumber": "Əlaqə nömrəsi",
+        "payment1": "çatdırılma zamanı ödəniş",
+        "payment2": "kredit kartı ilə çatdırılma zamanı ödəniş",
+        "checkoutButton": "Tamamla",
+        "yourOrder": "Sizin sifarişiniz",
+        "total": "Ümumi",
+        "orderReceived": "Sizin sifarişiniz qəbul edildi",
+        "errorsCheckout": {
+            "deliveryAddress": "Ünvan sahəsi boş qoyulub!",
+            "contactNumber": "Nömrə sahəsi boş qoyulub!",
+            "paymentMethod": "Xahiş edirik, ödəniş metodunu seçin!"
+        },
+        "errorsProfile": {
+            "phoneNumber": "Telefon nömrəsi sahəsi boş qoyulub!",
+            "email": "Email sahəsi boş qoyulub!",
+            "username": "İstifadəçi adı sahəsi boş qoyulub!",
+            "fullname": "Tam ad sahəsi boş qoyulub!"
+        }
+    },
+    "login": {
+        "login": "Giriş",
+        "register": "Qeydiyyat",
+        "email": "Email",
+        "password": "Şifrə",
+        "loginButton": "Daxil ol",
+        "fullname": "Tam ad",
+        "username": "İstifadəçi adı",
+        "registerButton": "Qeydiyyatdan keç",
+        "successfullLogin": "Müvəffəqiyyətlə daxil oldunuz!",
+        "successfullRegister": "Müvəffəqiyyətlə qeydiyyatdan keçdiniz!"
+    },
+    "errorsLogin": {
+        "register": {
+            "fullname": "Tam ad sahəsi boş qoyulub.",
+            "username": {
+                "empty": "İstifadəçi adı sahəsi boş qoyulub.",
+                "invalid": "İstifadəçi adı tələb olunan uzunluğa cavab vermir."
+            },
+            "email": {
+                "empty": "Email sahəsi boş qoyulub.",
+                "invalid": "Email düzgün formata uyğun deyil (məsələn, `@` və ya domen yoxdur)."
+            },
+            "password": "Şifrə ən azı 6 simvoldan ibarət olmalıdır."
+        },
+        "login": {
+            "email": {
+                "empty": "Email sahəsi boş qoyulub.",
+                "invalid": "Email düzgün formata uyğun deyil (məsələn, `@` və ya domen yoxdur)."
+            },
+            "password": "Şifrə sahəsi boş qoyulub."
+        }
+    }
+}

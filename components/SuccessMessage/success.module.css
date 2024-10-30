@@ -1,22 +1,26 @@
-.main {
-    background-color: #fff;
-    width: 300px;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    position: absolute;
-    top: 100px;
-    right: 0;
-    transition: 0.5s all;
-}
-
-.main h1 {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 24px;
-    color: green;
-}
+.successMessage {
+    background-color: #24af0c;
+    color: white;
+    padding: 16px;
+    position: fixed;
+    top: 120px;
+    right: 20px;
+    border-radius: 5px;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    animation: fadeOut 3s forwards; /* Starts fading out after 3s */
+    z-index: 999;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  

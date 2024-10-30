@@ -1,6 +1,6 @@
 import { createSwaggerSpec } from "next-swagger-doc";
 import dynamic from "next/dynamic";
-import paths from "swanger/paths.json";
+import paths from "../swanger/paths.json";
 
 import "swagger-ui-react/swagger-ui.css";
 import Head from "next/head";

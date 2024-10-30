@@ -1,7 +1,13 @@
 import { useState, useEffect } from "react";
 import styles from "./delete.module.css";
+import { deleteProduct } from "../../src/features/productSlice";
+import { deleteCategory } from "../../src/features/categorySlice";
+import { useDispatch } from "react-redux";
+import { deleteRestuarant } from "../../src/features/restaurantsSlice";
+import { deleteOffer } from "../../src/features/offersSlice";
 
-export default function Delete({ id, setClosing, success, products, whichPage }) {
+export default function Delete({ whichPage, setClosing, id, products, success, categories, restaurants, offers }) {
+    const dispatch = useDispatch();
     const [page, setPage] = useState(null);
 
     useEffect(() => {
@@ -14,15 +20,12 @@ export default function Delete({ id, setClosing, success, products, whichPage })
                             <button
                                 className={styles.deleteButton}
                                 onClick={() => {
-                                    fetch(`/api/products/${id}`, { method: "DELETE" }).then(() => {
-                                        setClosing(false);
-                                        success();
-                                        products();
-                                    });
+                                    dispatch(deleteProduct(id));
+                                    setClosing(false);
+                                    success();
+                                    products();
                                 }}
-                            >
-                                Delete
-                            </button>
+                            >Delete</button>
                             <button className={styles.cancelButton} onClick={() => { setClosing(false); }}>
                                 Cancel
                             </button>
@@ -38,10 +41,10 @@ export default function Delete({ id, setClosing, success, products, whichPage })
                             <button
                                 className={styles.deleteButton}
                                 onClick={() => {
-                                    fetch(`/api/restuarants/${id}`, { method: "DELETE" }).then(() => {
-                                        setClosing(false);
-                                        success();
-                                    });
+                                    dispatch(deleteRestuarant(id));
+                                    setClosing(false);
+                                    success();
+                                    restaurants();
                                 }}
                             >
                                 Delete
@@ -61,11 +64,33 @@ export default function Delete({ id, setClosing, success, products, whichPage })
                             <button
                                 className={styles.deleteButton}
                                 onClick={() => {
-                                    fetch(`/api/category/${id}`, { method: "DELETE" }).then(() => {
-                                        setClosing(false);
-                                        success();
-                                        products();
-                                    });
+                                    dispatch(deleteCategory(id));
+                                    setClosing(false);
+                                    success();
+                                    categories();
+                                }}
+                            >
+                                Delete
+                            </button>
+                            <button className={styles.cancelButton} onClick={() => { setClosing(false); }}>
+                                Cancel
+                            </button>
+                        </div>
+                    </>
+                );
+                break;
+            case "offers":
+                setPage(
+                    <>
+                        <p>Attention! If you delete this offer, it will not come back...</p>
+                        <div className={styles.buttons}>
+                            <button
+                                className={styles.deleteButton}
+                                onClick={() => {
+                                    dispatch(deleteOffer(id));
+                                    setClosing(false);
+                                    success();
+                                    offers();
                                 }}
                             >
                                 Delete

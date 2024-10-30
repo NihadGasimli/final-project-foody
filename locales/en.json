@@ -1,0 +1,149 @@
+{
+    "header": {
+        "home": "Home",
+        "restaurants": "Restaurants",
+        "aboutus": "About us",
+        "howitworks": "How it works",
+        "faqs": "FAQs",
+        "signup": "Sign up",
+        "profile": "Profile",
+        "basket": "Your Basket",
+        "orders": "Your Orders",
+        "checkout": "Checkout",
+        "logout": "Logout"
+    },
+    "homepage": {
+        "heading": "Our Food site makes it easy to find local food",
+        "description": "Fast food is widely used in the food industry for quick, convenient meals. It’s popular for its speed and consistency, featuring items like burgers, fries, and sodas.",
+        "registerButton": "Register",
+        "orderNowButton": "Order now",
+        "features": "Features",
+        "featuresDescription": "Discover the essence of flavor with our exquisite culinary offerings. Our dishes are crafted with culinary precision to provide a harmonious balance of taste, texture, and presentation.",
+        "firstCardHeading": "Discount Boucher",
+        "secondCardHeading": "Fresh healthy food",
+        "thirdCardHeading": "Fast Home Delivery",
+        "firstAdvertisement": "Menu That Always Make You Fall In Love",
+        "secondAdvertisement": "Yummy Always Papa John’s Pizza.Agree?",
+        "thirdAdvertisement": "Do You Like French Fries? Mmm...",
+        "popularFoodHeading": "Our Popular Update New Foods",
+        "popularFoodDescription": "Discover our most popular dishes, from juicy steaks to fresh sushi rolls. Whether you're craving pasta, wood-fired pizza, or a rich dessert, our menu has something for everyone, blending comfort food with creative flavors.",
+        "discoverDiv": "Discover Restaurants Near From You",
+        "discoverDivButton": "Explore Now"
+    },
+    "restaurant": {
+        "cuisine": "Cuisine",
+        "deliveryMin": "Delivery",
+        "goBackButton": "Go Back",
+        "products": "Products",
+        "items": "items",
+        "basketEmpty": "Opps! Basket empty",
+        "checkout": "Checkout"
+    },
+    "aboutus": {
+        "heading": "About Us",
+        "description": "Foody is a modern, user-friendly website that connects customers with a variety of restaurants for fast and convenient food delivery. Whether you're craving a quick snack, a hearty meal, or something in between, Foody has you covered. With a wide range of local and international cuisines available, users can explore menus, place orders, and have their food delivered right to their doorstep.Foody partners with restaurants of all sizes, from small local eateries to popular chains, ensuring that there’s something for everyone. With real-time tracking, easy payment options, and personalized recommendations, Foody is the ultimate platform for satisfying your hunger, no matter the time or place.",
+        "hamburger": "Hamburger",
+        "pizza": "Sousage Pizza",
+        "soup": "Tomato Soup",
+        "coffee": "Papa Coffee"
+    },
+    "howitworks": {
+        "heading": "How it works",
+        "description": "Delivery may be extended during sale periods. Please refer to the checkout page for an updated estimate for your location. Kindly note that once you have placed an order, it is no longer possible to modify your order. Taxes and duties are included in all product prices.It is possible to place an order with shipment to a different address than your home or billing address when paying with a credit card. Please note that Klarna payments require that your order is shipped to your registered home address."
+    },
+    "faq": {
+        "heading": "F.A.Q",
+        "firstQ": "How to contact with Customer Service?",
+        "firstA": "Our Customer Experience Team is available 7 days a week and we offer 2 ways to get in contact.Email and Chat . We try to reply quickly, so you need not to wait too long for a response!.",
+        "secondQ": "There are products not available in the webshop.",
+        "secondA": "If you cannot find a product in the webshop, it might be out of stock. Please check back later or contact us for more information.",
+        "thirdQ": "I want cancel my order.",
+        "thirdA": "To cancel your order, please visit your order history and select the cancel option or contact customer service.",
+        "fourthQ": "What payment options are there?",
+        "fourhA": "We accept various payment options including credit/debit cards, PayPal, and bank transfers."
+    },
+    "userpage": {
+        "menu": {
+            "profile": "Profile",
+            "basket": "Your Basket",
+            "orders": "Your Orders",
+            "checkout": "Checkout",
+            "logout": "Logout"
+        },
+        "profileHeading": "Profile",
+        "contact": "Contact",
+        "email": "Email",
+        "username": "Username",
+        "address": "Address",
+        "fullname": "Fullname",
+        "saveButton": "Save",
+        "uploadButton": "Upload",
+        "basketHeading": "Your Basket",
+        "items": "items",
+        "checkout": "Checkout",
+        "basketEmpty": "Opps! Basket empty",
+        "ordersHeading": "Your Orders",
+        "time": "Time",
+        "deliveryAddress": "Delivery Address",
+        "paymentMethod": "Payment Method",
+        "showButton": "Show",
+        "deleteButton": "Delete",
+        "amount": "Amount",
+        "image": "Image",
+        "name": "Name",
+        "price": "Price $",
+        "count": "Count",
+        "checkoutHeading": "Checkout",
+        "contactNumber": "Contact Number",
+        "payment1": "pay at the door",
+        "payment2": "pay at the door by credit card",
+        "checkoutButton": "Checkout",
+        "yourOrder": "Your Order",
+        "total": "Total",
+        "orderReceived": "Your order has been received",
+        "errorsCheckout": {
+            "deliveryAddress": "The address field is left blank!",
+            "contactNumber": "The number field is left blank!",
+            "paymentMethod": "Please select payment method!"
+        },
+        "errorsProfile": {
+            "phoneNumber": "The number address field is left blank!",
+            "email": "The email field is left blank!",
+            "username": "The username field is left blank!",
+            "fullname": "The fullname field is left blank!"
+        }
+    },
+    "login": {
+        "login": "Login",
+        "register": "Register",
+        "email": "Email",
+        "password": "Password",
+        "loginButton": "Log in",
+        "fullname": "Fullname",
+        "username": "Username",
+        "registerButton": "Register",
+        "successfullLogin": "Succesfully logged in!",
+        "successfullRegister": "Succesfully registered!"
+    },
+    "errorsLogin": {
+        "register": {
+            "fullname": "The full name field is left blank.",
+            "username": {
+                "empty": "The username field is left blank.",
+                "invalid": "The username does not meet the required length."
+            },
+            "email": {
+                "empty": "The email field is left blank.",
+                "invalid": "The email does not follow a valid format (e.g., missing `@` or domain)."
+            },
+            "password": "The password must be a string with at least 6 characters."
+        },
+        "login": {
+            "email": {
+                "empty": "The email field is left blank.",
+                "invalid": "The email does not follow a valid format (e.g., missing `@` or domain)."
+            },
+            "password": "The password field is left blank."
+        }
+    }
+}

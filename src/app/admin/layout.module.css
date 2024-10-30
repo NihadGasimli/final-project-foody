@@ -28,8 +28,12 @@
 .logo {
     width: 92px;
     height: 32px;
-    margin-right: auto;
     padding-left: 10px;
+    margin-right: auto;
+}
+
+.logoResponsiveHeader {
+    display: none;
 }
 
 .addProductButton {
@@ -84,16 +88,16 @@
     margin-top: 64px;
 }
 
-.item {
+.asideMenu .item {
     display: flex;
-    width: 150px;
+    width: 200px;
     padding: 10px 5px;
     border-radius: 10px;
     gap: 10px;
     cursor: pointer;
 }
 
-.item:hover {
+.asideMenu .item:hover {
     background-color: #BE4CE2;
 }
 
@@ -101,7 +105,7 @@
     background-color: #CE69ED;
 }
 
-.item h1 {
+.asideMenu .item h1 {
     font-family: "Roboto", sans-serif;
     font-size: 18px;
     font-weight: 500;
@@ -111,12 +115,12 @@
     cursor: pointer;
 }
 
-.item .asideLogo {
+.asideMenu .item .asideLogo {
     width: 26px;
     height: 26px;
 }
 
-.item .asideLogoDashboard {
+.asideMenu .item .asideLogoDashboard {
     width: 22px;
     height: 22px;
     margin-left: 3px;
@@ -139,6 +143,33 @@
     background-color: #CE69ED;
 }
 
+.dropdown {
+    position: relative;
+    font-family: Arial, sans-serif;
+    border: 0;
+    cursor: pointer;
+}
+
+.dropdown_content {
+    padding: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    z-index: 99;
+    border-radius: 5px;
+    width: 100%;
+    transition: opacity 0.7s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.logo {
+    width: 134px;
+    height: 52px;
+}
+
 .hiddenOverflow {
     overflow: hidden;
 }
@@ -154,4 +185,165 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.asideMenuOpened {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    padding: 20px;
+    /* Optional: Add a background */
+    z-index: 9999999999;
+    opacity: 1;
+    transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.asideMenuClosed {
+    position: fixed;
+    top: 0;
+    left: -80%;
+    width: 80%;
+    height: 100%;
+    opacity: 0;
+    transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    overflow: scroll;
+}
+
+.header .hamburgerMenu {
+    z-index: 9999999;
+}
+
+@media (max-width: 768px) {
+    .asideMenu {
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 100%;
+        margin-top: 0;
+        gap: 10px;
+    }
+
+    .asideMenuOpened,
+    .asideMenuClosed {
+        transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    .asideMenu .item {
+        display: flex;
+        width: 150px;
+        padding: 10px 5px;
+        border-radius: 10px;
+        gap: 10px;
+        cursor: pointer;
+    }
+
+    .asideMenu .item:hover {
+        background-color: #BE4CE2;
+    }
+
+    .asideMenu .item h1 {
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        color: #FCDDEC;
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+    }
+
+    .asideMenu .item .asideLogo {
+        width: 26px;
+        height: 26px;
+    }
+
+    .asideMenu .item .asideLogoDashboard {
+        width: 22px;
+        height: 22px;
+        margin-left: 3px;
+    }
+
+    .hamburgerLogoAndArrowDiv {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: center;
+        margin-right: 30px;
+    }
+
+    .hamburgerArrow {
+        width: 28px;
+        height: 28px;
+        transition: 0.2s all;
+    }
+
+    .hamburgerArrow:hover {
+        background-color: gray;
+        border-radius: 3px;
+        padding: 10px;
+    }
+
+
+    .hamburgerLogo {
+        width: 100px;
+        height: 34px;
+    }
+
+    .headerAdmin {
+        margin-right: 10px;
+    }
+
+    .header {
+        width: 100%;
+    }
+
+    .navbar {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: right;
+    }
+
+    .logoResponsiveHeader {
+        display: block;
+        width: 100px;
+        height: 25px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .hamburgerAndLogoDiv {
+        margin: 0;
+        padding: 0;
+        margin-right: auto;
+        gap: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+    }
+
+    .addProductButton {
+        width: 30px;
+        font-size: 16px;
+    }
+
+    .mainSide {
+        width: 100%;
+        padding: 10px;
+        margin-left: 0;
+        /* z-index: 99; */
+    }
+
+    .container {
+        width: 100%;
+    }
 }

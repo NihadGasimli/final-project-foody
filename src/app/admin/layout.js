@@ -1,25 +1,86 @@
 "use client";
-import "../global.css";
+import "./global.css";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import AddProduct from "../../../components/AddProduct";
-import { Button, Dropdown, DropdownButton } from "react-bootstrap";
+import AsideModal from "../../../components/AsideModal";
 import styles from "./layout.module.css";
+import { useLanguage } from "../../../context/LanguageContext";
+
+import en from "../../../locales/admin/en.json";
+import az from "../../../locales/admin/az.json";
+import ru from "../../../locales/admin/ru.json";
 
 export default function RootLayout({ children }) {
-    const [whichPage, setWhichPage] = useState("");
+    const [whichPage, setWhichPage] = useState(null);
     const router = useRouter();
+    const dispatch = useDispatch();
     const [addProductModalOpened, setAddProductModalOpened] = useState(false);
-    const info = useSelector((state) => state.info);
+    const [windowWidth, setWindowWidth] = useState(0);
+    const [hamburgerMenu, setHamburgerMenu] = useState(false);
+    const [asideOpened, setAsideOpened] = useState(false);
+    const [flagSrc, setFlagSrc] = useState("/admin-flagEN.svg");
+    const { language, setLanguage } = useLanguage();
+    const [translation, setTranslation] = useState(en);
+    const [languageMenuDisplay, setLanguageMenuDisplay] = useState("none");
+
+
+    const inWhichPage = useSelector((state) => state.inWhichPage)
+
 
     useEffect(() => {
-        setWhichPage(info?.page);
-    }, [info]);
+        setWhichPage(inWhichPage.page)
+    }, [inWhichPage])
 
     useEffect(() => {
-        if (addProductModalOpened) {
+        setWindowWidth(window.innerWidth);
+
+        window.addEventListener('resize', () => { setWindowWidth(window.innerWidth) });
+
+    }, []);
+
+
+    useEffect(() => {
+        if (windowWidth < 768) {
+            setHamburgerMenu(true);
+        }
+        else {
+            setHamburgerMenu(false);
+        }
+    }, [windowWidth])
+
+    const toggleAsideMenu = () => {
+        setAsideOpened(!asideOpened);
+    };
+
+    const toggleLanguage = (lang) => {
+        setLanguage(lang);
+        toggleDropdown();
+        localStorage.setItem('lang', JSON.stringify(lang))
+    };
+
+    const toggleDropdown = () => {
+        setLanguageMenuDisplay(languageMenuDisplay === "none" ? "flex" : "none");
+    };
+
+    useEffect(() => {
+        if (language === "en") {
+            setFlagSrc("/admin-flagEN.svg");
+            setTranslation(en)
+        }
+        else if (language === "az") {
+            setFlagSrc("/admin-flagAZ.svg");
+            setTranslation(az)
+        }
+        else if (language === "ru") {
+            setFlagSrc("/admin-flagRU.svg");
+            setTranslation(ru)
+        }
+    }, [language])
+
+    useEffect(() => {
+        if (addProductModalOpened || asideOpened) {
             document.body.classList.add(styles.hiddenOverflow)
         }
         else {
@@ -27,167 +88,302 @@ export default function RootLayout({ children }) {
         }
     })
 
+
+    if (whichPage === null) {
+        return "";
+    }
+
+
     return (
-        <html lang="en">
-            <body className={styles.body}>
-
-                {addProductModalOpened && (
-                    <div className={styles.modalOverlay}>
-                        <AddProduct setClosing={setAddProductModalOpened} />
-                    </div>
-                )
-                }
-
-                <header className={styles.header}>
-                    <nav className={styles.navbar}>
-                        <Image
-                            src="/admin-logo.svg"
-                            className={styles.logo}
-                            width={0}
-                            height={0}
-                            alt="Logo"
-                        />
-
-                        <button className={styles.addProductButton} onClick={() => { setAddProductModalOpened(true) }}>+ ADD PRODUCT</button>
-
-                        {/* <div className={styles.languagesDiv}>
-                            <Image
-                                src="/admin-flagEN.svg"
-                                className={styles.flagEN}
-                                width={0}
-                                height={0}
-                                alt="Logo"
-                                onClick={() => setLanguageIsOpen(!languageIsOpen)}
-                            />
-
-                            {languageIsOpen && <Language />}
-                        </div> */}
-
-                        <Dropdown className={`${styles.divFlags} custom-dropdown`}>
-                            <Dropdown.Toggle variant="secondary" id="dropdown-basic" className={styles.toggleFlags} style={{ backgroundColor: "transparent", border: "0" }}>
-                                <Image
-                                    src="/admin-flagEN.svg"
-                                    className={styles.flagEN}
-                                    width={0}
-                                    height={0}
-                                    alt="Logo"
-                                />
-                            </Dropdown.Toggle>
-
-                            <Dropdown.Menu className={`${styles.ulFlags} custom-dropdown-menu`} style={{ width: "10px", backgroundColor: "transparent", border: "0", display: "flex", flexDirection: "column" }}>
-                                <Dropdown.Item href="#/action-1" className={`${styles.liFlags} custom-dropdown-item`}>
-                                    <Image
-                                        src="/admin-flagAZ.svg"
-                                        className={styles.flagEN}
-                                        width={0}
-                                        height={0}
-                                        alt="Logo"
-                                    />
-                                </Dropdown.Item>
-                                <Dropdown.Item href="#/action-2" className={`${styles.liFlags} custom-dropdown-item`}>
-                                    <Image
-                                        src="/admin-flagFR.svg"
-                                        className={styles.flagEN}
-                                        width={0}
-                                        height={0}
-                                        alt="Logo"
-                                    />
-                                </Dropdown.Item>
-                            </Dropdown.Menu>
-                        </Dropdown>
-
-                        <div className={styles.headerAdmin}>
-                            <Image
-                                src="/admin-avatar.svg"
-                                className={styles.avatarImage}
-                                width={0}
-                                height={0}
-                                alt="Logo"
-                            />
-                            <h1>Admin</h1>
-                        </div>
-                    </nav>
-                </header>
-
-                <div className={styles.container}>
-                    <div className={styles.asideMenu}>
-                        <div className={`${styles.item} ${whichPage === "dashboard" ? styles.selectedBackground : ""}`} onClick={() => router.push("/admin/dashboard")}>
-                            <Image
-                                src="/admin-aside-dashboard.svg"
-                                className={styles.asideLogoDashboard}
-                                width={0}
-                                height={0}
-                                alt="Logo"
-                            />
-                            <h1>Dashboard</h1>
-                        </div>
-                        <div className={`${styles.item} ${whichPage === "products" ? styles.selectedBackground : ""}`} onClick={() => router.push("/admin/products")}>
-                            <Image
-                                src="/admin-aside-products.svg"
-                                className={styles.asideLogo}
-                                width={0}
-                                height={0}
-                                alt="Logo"
-                            />
-                            <h1>Products</h1>
-                        </div>
-                        <div className={`${styles.item} ${whichPage === "restaurants" ? styles.selectedBackground : ""}`} onClick={() => router.push("/admin/restaurants")}>
-                            <Image
-                                src="/admin-aside-restaurants.svg"
-                                className={styles.asideLogo}
-                                width={0}
-                                height={0}
-                                alt="Logo"
-                            />
-                            <h1>Restaurants</h1>
-                        </div>
-                        <div className={`${styles.item} ${whichPage === "category" ? styles.selectedBackground : ""}`} onClick={() => router.push("/admin/category")}>
-                            <Image
-                                src="/admin-aside-category.svg"
-                                className={styles.asideLogo}
-                                width={0}
-                                height={0}
-                                alt="Logo"
-                            />
-                            <h1>Category</h1>
-                        </div>
-                        <div className={`${styles.item} ${whichPage === "orders" ? styles.selectedBackground : ""}`} onClick={() => router.push("/admin/orders")}>
-                            <Image
-                                src="/admin-aside-orders.svg"
-                                className={styles.asideLogo}
-                                width={0}
-                                height={0}
-                                alt="Logo"
-                            />
-                            <h1>Orders</h1>
-                        </div>
-                        <div className={`${styles.item} ${whichPage === "offers" ? styles.selectedBackground : ""}`} onClick={() => router.push("/admin/offers")}>
-                            <Image
-                                src="/admin-aside-offers.svg"
-                                className={styles.asideLogo}
-                                width={0}
-                                height={0}
-                                alt="Logo"
-                            />
-                            <h1>Offer</h1>
-                        </div>
-                        <div className={styles.item} onClick={() => router.push("/logout")}>
-                            <Image
-                                src="/admin-aside-logout.svg"
-                                className={styles.asideLogo}
-                                width={0}
-                                height={0}
-                                alt="Logo"
-                            />
-                            <h1>Logout</h1>
-                        </div>
-                    </div>
-
-                    <div className={styles.mainSide}>
+        <>
+            {whichPage === "loginn" ? (
+                <html>
+                    <body>
                         {children}
-                    </div>
-                </div>
-            </body>
-        </html>
+                    </body>
+                </html>
+            )
+                :
+                (<>
+                    <html lang="en">
+                        <body className={styles.body}>
+
+                            {addProductModalOpened && (
+                                <div className={styles.modalOverlay}>
+                                    <AsideModal setClosing={setAddProductModalOpened} whichModal={"product"} />
+                                </div>
+                            )
+                            }
+
+                            <header className={styles.header}>
+                                <nav className={styles.navbar}>
+                                    <div className={styles.hamburgerAndLogoDiv}>
+                                        {hamburgerMenu ? (
+                                            <>
+                                                <Image
+                                                    src="/hamburgerMenu.svg"
+                                                    className={styles.hamburgerLogo}
+                                                    width={50}
+                                                    height={50}
+                                                    alt="Logo"
+                                                    onClick={toggleAsideMenu}
+                                                />
+                                            </>
+                                        )
+                                            :
+                                            null
+                                        }
+                                        <Image
+                                            src="/admin-logo.svg"
+                                            className={styles.logoResponsiveHeader}
+                                            width={0}
+                                            height={0}
+                                            alt="Logo"
+                                        />
+                                        
+                                    </div>
+                                    <Image
+                                        src="/admin-logo.svg"
+                                        className={styles.logo}
+                                        width={0}
+                                        height={0}
+                                        alt="Logo"
+                                    />
+
+                                    <button className={styles.addProductButton} onClick={() => { setAddProductModalOpened(true) }}>{hamburgerMenu ? "+" : translation.header.addProduct}</button>
+
+                                    {!hamburgerMenu ? (
+                                        <div className={styles.dropdown}>
+                                            <Image
+                                                src={flagSrc}
+                                                className={styles.flag}
+                                                width={50}
+                                                height={50}
+                                                alt="image"
+                                                onClick={toggleDropdown}
+                                            />
+
+                                            <div className={styles.dropdown_content} style={{ display: `${languageMenuDisplay}` }}>
+                                                <Image
+                                                    src="/admin-flagEN.svg"
+                                                    className={styles.flag}
+                                                    width={50}
+                                                    height={50}
+                                                    alt="image"
+                                                    onClick={() => { toggleLanguage("en") }}
+                                                />
+                                                <Image
+                                                    src="/admin-flagAZ.svg"
+                                                    className={styles.flag}
+                                                    width={50}
+                                                    height={50}
+                                                    alt="image"
+                                                    onClick={() => { toggleLanguage("az") }}
+                                                />
+                                                <Image
+                                                    src="/admin-flagRU.svg"
+                                                    className={styles.flag}
+                                                    width={50}
+                                                    height={50}
+                                                    alt="image"
+                                                    onClick={() => { toggleLanguage("ru") }}
+                                                />
+                                            </div>
+                                        </div>
+                                    ) : null}
+
+                                    <div className={styles.headerAdmin}>
+                                        <Image
+                                            src="/admin-avatar.svg"
+                                            className={styles.avatarImage}
+                                            width={0}
+                                            height={0}
+                                            alt="Logo"
+                                        />
+                                        {!hamburgerMenu ? (<h1>Admin</h1>) : null}
+                                    </div>
+                                </nav>
+                            </header>
+
+                            <div className={styles.container}>
+                                {hamburgerMenu ? (
+                                    <>
+                                        <div className={`${styles.asideMenu} ${asideOpened ? styles.asideMenuOpened : styles.asideMenuClosed}`}>
+                                            <div className={styles.hamburgerLogoAndArrowDiv}>
+                                                <Image
+                                                    src="/admin-hamburger-arrowBack.svg"
+                                                    className={styles.hamburgerArrow}
+                                                    width={30}
+                                                    height={30}
+                                                    alt="Logo"
+                                                    onClick={toggleAsideMenu}
+                                                />
+                                                <Image
+                                                    src="/admin-logo.svg"
+                                                    className={styles.hamburgerLogo}
+                                                    width={80}
+                                                    height={80}
+                                                    alt="Logo"
+                                                />
+                                            </div>
+                                            <div className={`${styles.item} ${whichPage === "dashboard" ? styles.selectedBackground : ""}`} onClick={() => { router.push("/admin/dashboard"); toggleAsideMenu(); }}>
+                                                <Image
+                                                    src="/admin-aside-dashboard.svg"
+                                                    className={styles.asideLogoDashboard}
+                                                    width={0}
+                                                    height={0}
+                                                    alt="Logo"
+                                                />
+                                                <h1>{translation.asideMenu.dashboard}</h1>
+                                            </div>
+                                            <div className={`${styles.item} ${whichPage === "products" ? styles.selectedBackground : ""}`} onClick={() => { router.push("/admin/products"); toggleAsideMenu(); }}>
+                                                <Image
+                                                    src="/admin-aside-products.svg"
+                                                    className={styles.asideLogo}
+                                                    width={0}
+                                                    height={0}
+                                                    alt="Logo"
+                                                />
+                                                <h1>{translation.asideMenu.products}</h1>
+                                            </div>
+                                            <div className={`${styles.item} ${whichPage === "restaurants" ? styles.selectedBackground : ""}`} onClick={() => { router.push("/admin/restaurants"); toggleAsideMenu(); }}>
+                                                <Image
+                                                    src="/admin-aside-restaurants.svg"
+                                                    className={styles.asideLogo}
+                                                    width={0}
+                                                    height={0}
+                                                    alt="Logo"
+                                                />
+                                                <h1>{translation.asideMenu.restaurants}</h1>
+                                            </div>
+                                            <div className={`${styles.item} ${whichPage === "category" ? styles.selectedBackground : ""}`} onClick={() => { router.push("/admin/category"); toggleAsideMenu(); }}>
+                                                <Image
+                                                    src="/admin-aside-category.svg"
+                                                    className={styles.asideLogo}
+                                                    width={0}
+                                                    height={0}
+                                                    alt="Logo"
+                                                />
+                                                <h1>{translation.asideMenu.category}</h1>
+                                            </div>
+                                            <div className={`${styles.item} ${whichPage === "orders" ? styles.selectedBackground : ""}`} onClick={() => { router.push("/admin/orders"); toggleAsideMenu(); }}>
+                                                <Image
+                                                    src="/admin-aside-orders.svg"
+                                                    className={styles.asideLogo}
+                                                    width={0}
+                                                    height={0}
+                                                    alt="Logo"
+                                                />
+                                                <h1>{translation.asideMenu.orders}</h1>
+                                            </div>
+                                            <div className={`${styles.item} ${whichPage === "offers" ? styles.selectedBackground : ""}`} onClick={() => { router.push("/admin/offers"); toggleAsideMenu(); }}>
+                                                <Image
+                                                    src="/admin-aside-offers.svg"
+                                                    className={styles.asideLogo}
+                                                    width={0}
+                                                    height={0}
+                                                    alt="Logo"
+                                                />
+                                                <h1>{translation.asideMenu.offer}</h1>
+                                            </div>
+                                            <div className={styles.item} onClick={() => { router.push("/admin/login"); sessionStorage.setItem("login", false); toggleAsideMenu(); }}>
+                                                <Image
+                                                    src="/admin-aside-logout.svg"
+                                                    className={styles.asideLogo}
+                                                    width={0}
+                                                    height={0}
+                                                    alt="Logo"
+                                                />
+                                                <h1>{translation.asideMenu.logout}</h1>
+                                            </div>
+                                        </div>
+                                    </>
+                                )
+                                    :
+                                    (
+                                        <>
+                                            <div className={styles.asideMenu}>
+                                                <div className={`${styles.item} ${whichPage === "dashboard" ? styles.selectedBackground : ""}`} onClick={() => router.push("/admin/dashboard")}>
+                                                    <Image
+                                                        src="/admin-aside-dashboard.svg"
+                                                        className={styles.asideLogoDashboard}
+                                                        width={0}
+                                                        height={0}
+                                                        alt="Logo"
+                                                    />
+                                                    <h1>{translation.asideMenu.dashboard}</h1>
+                                                </div>
+                                                <div className={`${styles.item} ${whichPage === "products" ? styles.selectedBackground : ""}`} onClick={() => router.push("/admin/products")}>
+                                                    <Image
+                                                        src="/admin-aside-products.svg"
+                                                        className={styles.asideLogo}
+                                                        width={0}
+                                                        height={0}
+                                                        alt="Logo"
+                                                    />
+                                                    <h1>{translation.asideMenu.products}</h1>
+                                                </div>
+                                                <div className={`${styles.item} ${whichPage === "restaurants" ? styles.selectedBackground : ""}`} onClick={() => router.push("/admin/restaurants")}>
+                                                    <Image
+                                                        src="/admin-aside-restaurants.svg"
+                                                        className={styles.asideLogo}
+                                                        width={0}
+                                                        height={0}
+                                                        alt="Logo"
+                                                    />
+                                                    <h1>{translation.asideMenu.restaurants}</h1>
+                                                </div>
+                                                <div className={`${styles.item} ${whichPage === "category" ? styles.selectedBackground : ""}`} onClick={() => router.push("/admin/category")}>
+                                                    <Image
+                                                        src="/admin-aside-category.svg"
+                                                        className={styles.asideLogo}
+                                                        width={0}
+                                                        height={0}
+                                                        alt="Logo"
+                                                    />
+                                                    <h1>{translation.asideMenu.category}</h1>
+                                                </div>
+                                                <div className={`${styles.item} ${whichPage === "orders" ? styles.selectedBackground : ""}`} onClick={() => router.push("/admin/orders")}>
+                                                    <Image
+                                                        src="/admin-aside-orders.svg"
+                                                        className={styles.asideLogo}
+                                                        width={0}
+                                                        height={0}
+                                                        alt="Logo"
+                                                    />
+                                                    <h1>{translation.asideMenu.orders}</h1>
+                                                </div>
+                                                <div className={`${styles.item} ${whichPage === "offers" ? styles.selectedBackground : ""}`} onClick={() => router.push("/admin/offers")}>
+                                                    <Image
+                                                        src="/admin-aside-offers.svg"
+                                                        className={styles.asideLogo}
+                                                        width={0}
+                                                        height={0}
+                                                        alt="Logo"
+                                                    />
+                                                    <h1>{translation.asideMenu.offer}</h1>
+                                                </div>
+                                                <div className={styles.item} onClick={() => { router.push("/admin/login"); sessionStorage.setItem("login", false) }}>
+                                                    <Image
+                                                        src="/admin-aside-logout.svg"
+                                                        className={styles.asideLogo}
+                                                        width={0}
+                                                        height={0}
+                                                        alt="Logo"
+                                                    />
+                                                    <h1>{translation.asideMenu.logout}</h1>
+                                                </div>
+                                            </div>
+                                        </>
+                                    )}
+
+                                <div className={styles.mainSide}>
+                                    {children}
+                                </div>
+                            </div>
+                        </body>
+                    </html>
+                </>)}
+        </>
     );
 }

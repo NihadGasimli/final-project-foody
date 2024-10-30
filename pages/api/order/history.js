@@ -1,6 +1,6 @@
-import { METHOD } from "constant/method";
-import { ROUTER } from "constant/router";
-import { handlerOrderHistoryGET } from "routes/order";
+import { METHOD } from "../../../constant/method";
+import { ROUTER } from "../../../constant/router";
+import { handlerOrderHistoryGET } from "../../../routes/order";
 
 export default async function handler(req, res) {
   console.log(req.body);

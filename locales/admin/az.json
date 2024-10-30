@@ -1,0 +1,282 @@
+{
+    "header": {
+        "addProduct": "+ Məhsul əlavə et"
+    },
+    "asideMenu": {
+        "dashboard": "İdarəetmə",
+        "products": "Məhsullar",
+        "restaurants": "Restoranlar",
+        "category": "Kateqoriyalar",
+        "orders": "Sifarişlər",
+        "offer": "Təkliflər",
+        "logout": "Çıxış"
+    },
+    "dashboard": {
+        "orders": "Sifarişlər",
+        "totalSalary": "Ümumi maaş",
+        "offers": "Təkliflər",
+        "assignedItems": "Təyin olunmuş tapşırıqlar"
+    },
+    "products": {
+        "products": "Məhsullar",
+        "categoryType": "Kateqoriya növü",
+        "categoryType_all": "Hamısı"
+    },
+    "restaurants": {
+        "restaurants": "Restoranlar",
+        "categoryType": "Kateqoriya növü",
+        "categoryType_all": "Hamısı",
+        "addRestaurant": "+ Restoran əlavə et"
+    },
+    "category": {
+        "category": "Kateqoriyalar",
+        "addCategory": "+ Kateqoriya əlavə et",
+        "image": "Şəkil",
+        "name": "Ad",
+        "slug": "Slug"
+    },
+    "orders": {
+        "orders": "Sifarişlər",
+        "time": "Vaxt",
+        "deliveryAddress": "Çatdırılma ünvanı",
+        "amount": "Məbləğ",
+        "paymentMethod": "Ödəniş üsulu",
+        "contact": "Əlaqə",
+        "showButton": "Göstər",
+        "deleteButton": "Sil",
+        "image": "Şəkil",
+        "name": "Ad",
+        "price": "Qiymət $",
+        "count": "Say"
+    },
+    "offers": {
+        "offers": "Təkliflər",
+        "addOffer": "+ Təklif əlavə et",
+        "image": "Şəkil",
+        "title": "Ad",
+        "description": "Təsvir"
+    },
+    "login": {
+        "welcomeAdmin": "Xoş gəldiniz, Admin",
+        "username": "İstifadəçi adı",
+        "password": "Şifrə",
+        "signin": "Daxil ol",
+        "errors": {
+            "username": "Zəhmət olmasa, istifadəçi adını yazın",
+            "password": "Zəhmət olmasa, şifrəni yazın"
+        }
+    },
+    "loginFirst": "Zəhmət olmasa əvvəlcə daxil olun!",
+    "asideModal": {
+        "addProduct": {
+            "heading": "Məhsul əlavə et",
+            "uploadImage": "Məhsulun şəklini yükləyin",
+            "uploadText": "Yüklə",
+            "secondHeading": "Məhsulun təsvirini və lazımi məlumatları əlavə edin",
+            "form": {
+                "name": "Ad",
+                "description": "Təsvir",
+                "price": "Qiymət",
+                "restaurants": "Restoranlar",
+                "placeholders": {
+                    "name": "Məhsulun adı",
+                    "description": "Məhsulun təsviri",
+                    "price": "Məhsulun qiyməti",
+                    "restaurants": "Restoran seçin"
+                }
+            },
+            "cancelButton": "Ləğv et",
+            "confirmButton": "Məhsul Yarat",
+            "errors": {
+                "image": "Zəhmət olmasa məhsulun şəklini seçin",
+                "name": "Zəhmət olmasa məhsulun adını yazın",
+                "description": "Zəhmət olmasa məhsulun təsvirini yazın",
+                "price": "Zəhmət olmasa məhsulun qiymətini yazın",
+                "restaurants": "Zəhmət olmasa restoran növünü seçin"
+            }
+        },
+        "editProduct": {
+            "heading": "Məhsulu redaktə et",
+            "uploadImage": "Məhsulun şəklini yükləyin",
+            "uploadText": "Yüklə",
+            "secondHeading": "Məhsulun təsvirini və lazımi məlumatlarını redaktə edin",
+            "form": {
+                "name": "Ad",
+                "description": "Təsvir",
+                "price": "Qiymət",
+                "restaurants": "Restoranlar",
+                "placeholders": {
+                    "name": "Məhsulun adı",
+                    "description": "Məhsulun təsviri",
+                    "price": "Məhsulun qiyməti",
+                    "restaurants": "Restoran seçin"
+                }
+            },
+            "cancelButton": "Ləğv et",
+            "confirmButton": "Məhsulu Redaktə et",
+            "errors": {
+                "image": "Zəhmət olmasa məhsulun şəklini seçin",
+                "name": "Zəhmət olmasa məhsulun adını yazın",
+                "description": "Zəhmət olmasa məhsulun təsvirini yazın",
+                "price": "Zəhmət olmasa məhsulun qiymətini yazın",
+                "restaurants": "Zəhmət olmasa restoran növünü seçin"
+            }
+        },
+        "addRestaurant": {
+            "heading": "Restoran əlavə et",
+            "uploadImage": "Restoranın şəklini yükləyin",
+            "uploadText": "Yüklə",
+            "secondHeading": "Restoranın təsvirini və lazımi məlumatlarını əlavə edin",
+            "form": {
+                "name": "Ad",
+                "cuisine": "Mətbəx",
+                "deliveryPrice": "Çatdırılma Qiyməti $",
+                "deliveryMin": "Çatdırılma Müddəti",
+                "address": "Ünvan",
+                "category": "Kateqoriya",
+                "slug": "Slug",
+                "placeholders": {
+                    "name": "Restoranın adı",
+                    "cuisine": "Fast food, İçki, Dondurma",
+                    "deliveryPrice": "məs. 1.2",
+                    "deliveryMin": "məs. 6",
+                    "address": "Nizami küçəsi 45, Bakı, Azərbaycan",
+                    "category": "Kateqoriya seçin",
+                    "slug": "Restoran Slug"
+                }
+            },
+            "cancelButton": "Ləğv et",
+            "confirmButton": "Restoran əlavə et",
+            "errors": {
+                "image": "Zəhmət olmasa restoranın şəklini seçin",
+                "name": "Zəhmət olmasa restoranın adını yazın",
+                "cuisine": "Zəhmət olmasa restoranın mətbəxini yazın",
+                "deliveryPrice": "Zəhmət olmasa çatdırılma qiymətini yazın",
+                "deliveryMin": "Zəhmət olmasa çatdırılma vaxtını yazın",
+                "address": "Zəhmət olmasa restoranın ünvanını yazın",
+                "category": "Zəhmət olmasa restoranın kateqoriyasını seçin",
+                "slug": "Zəhmət olmasa restoranın slugunu yazın"
+            }
+        },
+        "editRestaurant": {
+            "heading": "Restoranı redaktə et",
+            "uploadImage": "Restoranın şəklini yükləyin",
+            "uploadText": "Yüklə",
+            "secondHeading": "Restoran məlumatlarını redaktə edin",
+            "form": {
+                "name": "Ad",
+                "cuisine": "Mətbəx",
+                "deliveryPrice": "Çatdırılma Qiyməti $",
+                "deliveryMin": "Çatdırılma Müddəti",
+                "address": "Ünvan",
+                "category": "Kateqoriya",
+                "slug": "Slug",
+                "placeholders": {
+                    "name": "Restoranın adı",
+                    "cuisine": "Fast food, İçki, Dondurma",
+                    "deliveryPrice": "məs. 1.2",
+                    "deliveryMin": "məs. 6",
+                    "address": "Nizami küçəsi 45, Bakı, Azərbaycan",
+                    "category": "Kateqoriya seçin",
+                    "slug": "Restoran Slug"
+                }
+            },
+            "cancelButton": "Ləğv et",
+            "confirmButton": "Restoranı Redaktə et",
+            "errors": {
+                "image": "Zəhmət olmasa restoranın şəklini seçin",
+                "name": "Zəhmət olmasa restoranın adını yazın",
+                "cuisine": "Zəhmət olmasa restoranın mətbəxini yazın",
+                "deliveryPrice": "Zəhmət olmasa çatdırılma qiymətini yazın",
+                "deliveryMin": "Zəhmət olmasa çatdırılma vaxtını yazın",
+                "address": "Zəhmət olmasa restoranın ünvanını yazın",
+                "category": "Zəhmət olmasa restoranın kateqoriyasını seçin",
+                "slug": "Zəhmət olmasa restoranın slugunu yazın"
+            }
+        },
+        "addCategory": {
+            "heading": "Kateqoriya əlavə et",
+            "uploadImage": "Kateqoriyanın şəklini yükləyin",
+            "uploadText": "Yüklə",
+            "secondHeading": "Kateqoriya məlumatlarını əlavə edin",
+            "form": {
+                "name": "Ad",
+                "slug": "Slug",
+                "placeholders": {
+                    "name": "Kateqoriyanın adı",
+                    "slug": "Kateqoriyanın slug"
+                }
+            },
+            "cancelButton": "Ləğv et",
+            "confirmButton": "Kateqoriya əlavə et",
+            "errors": {
+                "image": "Zəhmət olmasa kateqoriyanın şəklini seçin",
+                "name": "Zəhmət olmasa kateqoriyanın adını yazın",
+                "slug": "Zəhmət olmasa kateqoriyanın slugunu yazın"
+            }
+        },
+        "editCategory": {
+            "heading": "Kateqoriyanı redaktə et",
+            "uploadImage": "Kateqoriyanın şəklini yükləyin",
+            "uploadText": "Yüklə",
+            "secondHeading": "Kateqoriyanın məlumatlarını redaktə edin",
+            "form": {
+                "name": "Ad",
+                "slug": "Slug",
+                "placeholders": {
+                    "name": "Kateqoriyanın adı",
+                    "slug": "Kateqoriyanın slug"
+                }
+            },
+            "cancelButton": "Ləğv et",
+            "confirmButton": "Kateqoriyanı yenilə",
+            "errors": {
+                "image": "Zəhmət olmasa kateqoriyanın şəklini seçin",
+                "name": "Zəhmət olmasa kateqoriyanın adını yazın",
+                "slug": "Zəhmət olmasa kateqoriyanın slugunu yazın"
+            }
+        },
+        "addOffer": {
+            "heading": "Təklif əlavə et",
+            "uploadImage": "Şəkil yükləyin",
+            "uploadText": "Yüklə",
+            "secondHeading": "Təklif məlumatlarını əlavə edin",
+            "form": {
+                "title": "Başlıq",
+                "description": "Təsvir",
+                "placeholders": {
+                    "title": "Təklifin adı",
+                    "description": "Təklifin təsviri"
+                }
+            },
+            "cancelButton": "Ləğv et",
+            "confirmButton": "Təklif yarat",
+            "errors": {
+                "image": "Zəhmət olmasa təklifin şəklini seçin",
+                "name": "Zəhmət olmasa təklifin adını yazın",
+                "description": "Zəhmət olmasa təklifin təsvirini yazın"
+            }
+        },
+        "editOffer": {
+            "heading": "Təklifi redaktə et",
+            "uploadImage": "Şəkil yükləyin",
+            "uploadText": "Yüklə",
+            "secondHeading": "Təklif məlumatlarını redaktə edin",
+            "form": {
+                "title": "Başlıq",
+                "description": "Təsvir",
+                "placeholders": {
+                    "title": "Təklifin adı",
+                    "description": "Təklifin təsviri"
+                }
+            },
+            "cancelButton": "Ləğv et",
+            "confirmButton": "Təklifi redaktə et",
+            "errors": {
+                "image": "Zəhmət olmasa təklifin şəklini seçin",
+                "name": "Zəhmət olmasa təklifin adını yazın",
+                "description": "Zəhmət olmasa təklifin təsvirini yazın"
+            }
+        }
+    }
+}

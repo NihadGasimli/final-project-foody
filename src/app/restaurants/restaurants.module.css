@@ -1,0 +1,314 @@
+.container {
+    width: 95%;
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+    min-height: 500px;
+}
+
+.leftSide {
+    width: 15%;
+    height: 500px;
+    background-color: #F3F4F6;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 10px;
+    overflow: auto;
+}
+
+.categoryItem {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.categoryItem:hover {
+    background-color: #EBBAB6;
+}
+
+.categoryItem img {
+    width: 25px;
+    height: 28px;
+    border-radius: 50%;
+}
+
+.categoryItem h2 {
+    font-family: "Mukta", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 3%;
+    color: #333;
+    padding-top: 5px;
+}
+
+.selectedCategory {
+    background-color: #F0E1E1;
+}
+
+.rightSide {
+    width: 85%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rightSide .filtersButton {
+    display: none;
+}
+
+.restaurants {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 10px;
+}
+
+.restaurantDiv {
+    width: 19%;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 5px #0000001f;
+    border: 0;
+    cursor: pointer;
+    padding-top: 10px;
+    transition: 0.2s all;
+}
+
+.restaurantDiv:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.restaurantDiv .restaurantTexts {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.restaurantDiv .restaurantImage {
+    width: 80%;
+    width: auto;
+    height: 161px;
+    border-radius: 10px;
+}
+
+.restaurantDiv .restaurantName {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 70px;
+    letter-spacing: 3%;
+}
+
+.restaurantDiv .restaurantCuisine {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 3%;
+}
+
+.restaurantDiv .deliveryDiv {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.restaurantDiv .restaurantDelivery_price {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 70px;
+    letter-spacing: 3%;
+}
+
+.restaurantDiv .restaurantDelivery_min {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 3%;
+    text-align: center;
+    background-color: #D63626;
+    border-radius: 30px;
+    padding: 5px 30px;
+    color: #fff;
+}
+
+.loadingGif {
+    width: 220px;
+    height: 220px;
+    margin: 100px auto;
+    background-color: transparent;
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hiddenOverflow {
+    overflow: hidden;
+}
+
+.categoriesFilter {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .leftSide {
+        display: none;
+    }
+
+    .rightSide {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .rightSide .restaurants {
+        flex-wrap: wrap;
+    }
+
+    .rightSide .restaurants .restaurantDiv {
+        width: 45%;
+        height: 230px;
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    .rightSide .restaurants .restaurantDiv .restaurantImage {
+        width: 70%;
+        height: 88px;
+    }
+
+    .rightSide .restaurants .restaurantDiv .restaurantTexts {
+        gap: 0px;
+        height: fit-content;
+    }
+
+    .rightSide .restaurants .restaurantDiv .restaurantName {
+        font-size: 16px;
+        margin: 0;
+        line-height: 20px;
+    }
+
+    .rightSide .restaurants .restaurantDiv .restaurantCuisine {
+        margin: 0;
+        font-size: 10px;
+    }
+
+    .rightSide .restaurants .restaurantDiv .deliveryDiv {
+        flex-direction: column;
+    }
+
+    .rightSide .restaurants .restaurantDiv .restaurantDelivery_price {
+        margin: 0;
+        font-size: 12px;
+        line-height: 33px;
+    }
+
+    .rightSide .restaurants .restaurantDiv .restaurantDelivery_min {
+        font-size: 10px;
+        width: 90%;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rightSide .filtersButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 35px;
+        background-color: #fff;
+        color: #4F4F4F;
+        box-shadow: 0px 3px 8px -2px #00000033;
+        border: 0;
+        font-family: "Mukta", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0.03em;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    .rightSide .filterDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .rightSide .filterDiv p {
+        position: absolute;
+        right: 10px;
+        padding-top: 15px;
+        color: #D63626;
+        font-weight: 500;
+        font-size: 12px;
+    }
+
+    .categoriesFilter {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        height: 467px;
+        position: absolute;
+        bottom: 0;
+        border-top-left-radius: 10%;
+        border-top-right-radius: 10%;
+        overflow: auto;
+    }
+
+    .categoriesFilter .closeFilterButton {
+        width: 35px;
+        height: 35px;
+        align-self: center;
+        margin: 10px 50px;
+    }
+
+    .categoriesFilter hr {
+        width: 90%;
+        padding: 0;
+        margin: 5px;
+    }
+
+    .categoriesFilter h2 {
+        padding: 20px;
+    }
+
+    .categoriesFilter .categoryItemFilter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 40px;
+    }
+
+    .categoriesFilter .selectedCategoryFilter {
+        background-color: #EBBAB6;
+    }
+
+}

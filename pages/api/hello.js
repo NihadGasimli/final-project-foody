@@ -1,13 +1,13 @@
-import { enableCors } from "utils/enableCors";
-import { handlerProductGET, handlerProductPOST } from "routes/product";
-import { ROUTER } from "constant/router";
+import { enableCors } from "../../utils/enableCors";
+import { handlerProductGET, handlerProductPOST } from "../../routes/product";
+import { ROUTER } from "../../constant/router";
 
-import admin from "configs/firebaseAdmin";
-import { addData } from "helper/addData";
-import { getQueryData } from "helper/getQueryData";
+import admin from "../../configs/firebaseAdmin";
+import { addData } from "../../helper/addData";
+import { getQueryData } from "../../helper/getQueryData";
 
-import { generateJWT, generateRefreshToken } from "utils/jwt";
-import { comparePasswords } from "utils/passwordHash";
+import { generateJWT, generateRefreshToken } from "../../utils/jwt";
+import { comparePasswords } from "../../utils/passwordHash";
 
 async function handler(req, res) {
   if (req.method == "GET") {

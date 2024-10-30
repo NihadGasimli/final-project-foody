@@ -1,0 +1,247 @@
+.main {
+    background-color: #38394E;
+    height: 100vh;
+    width: 948px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.addProductHeading {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 24px;
+    color: #C7C7C7;
+    padding-left: 20px;
+}
+
+.uploadImageDiv {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.uploadImage {
+    width: 526px;
+    height: 122px;
+    background-color: #43445A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.uploadImageAltDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.uploadImage h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #C7C7C7;
+}
+
+.whenImageSelected {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.whenImageSelected h1 {
+    color: #fff;
+    font-size: 10px;
+}
+
+.uploadImageDiv h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #C7C7C7;
+}
+
+.descriptionDiv {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    margin-bottom: 20px;
+}
+
+.descriptionDiv h2 {
+    font-family: "Roboto", sans-serif;
+    width: 257px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #C7C7C7;
+}
+
+.description {
+    display: flex;
+    width: 526px;
+    height: 450px;
+    background-color: #43445A;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: auto;
+}
+
+.descriptionEditCategory {
+    height: 300px;
+}
+
+.description::-webkit-scrollbar {
+    background-color: #fff;
+    width: 10px;
+}
+
+.description::-webkit-scrollbar-thumb {
+    background-color: #C74FEB;
+}
+
+.description label {
+    font-family: "Roboto", sans-serif;
+    width: 257px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #C7C7C7;
+    padding: 10px 26px;
+}
+
+.description input,
+.description select,
+.description textarea {
+    width: 90%;
+    height: 46px;
+    border-radius: 10px;
+    background-color: #5A5B70;
+    border: 0;
+    color: #C7C7C7;
+    align-self: center;
+    padding: 10px;
+    resize: none;
+}
+
+.description select {
+    cursor: pointer;
+}
+
+.description input::placeholder,
+.description textarea::placeholder {
+    color: #C7C7C7;
+}
+
+.description textarea {
+    min-height: 100px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: auto;
+}
+
+.buttons button {
+    width: 45%;
+    height: 50px;
+    border-radius: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #fff;
+    background-color: #43445A;
+    border: 0;
+    transition: 0.2s all;
+}
+
+.buttons button:hover {
+    background-color: #C74FEB;
+}
+
+.buttons .createButton {
+    background: #C035A2;
+}
+
+.deleteUploadedLogo {
+    width: 30px;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.priceInput::-webkit-outer-spin-button,
+.priceInput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+
+    .main {
+        width: 100%;
+        height: 100vh;
+        overflow: auto;
+    }
+
+    .descriptionDiv {
+        flex-direction: column;
+    }
+
+    .description {
+        width: 100%;
+        height: 40vh;
+    }
+
+    .descriptionDiv h2 {
+        width: 100%;
+        font-size: 14px;
+        padding-left: 20px;
+    }
+
+    .buttons{
+        margin-top: 30px;
+    }
+
+    .uploadImageDiv{
+        flex-direction: column;
+    }
+    
+    .uploadImageDiv h2{
+        font-size: 14px;
+        padding-left: 20px;
+    }
+    
+    .uploadImage{
+        width: 100%;
+        height: 100px;
+    }
+
+    .addProductHeading{
+        padding: 0;
+        align-self: center;
+    }
+
+}

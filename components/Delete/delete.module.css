@@ -4,7 +4,7 @@
     height: 227px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     border-radius: 10px;
     position: fixed;

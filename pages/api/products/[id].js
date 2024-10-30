@@ -1,10 +1,10 @@
-import { METHOD } from "constant/method";
-import { ROUTER } from "constant/router";
+import { METHOD } from "../../../constant/method";
+import { ROUTER } from "../../../constant/router";
 import {
   handlerProductDELETE,
   handlerProductGETID,
   handlerProductPUT,
-} from "routes/product";
+} from "../../../routes/product";
 
 export default async function handler(req, res) {
   console.log(req.body);

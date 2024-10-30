@@ -1,11 +1,11 @@
-import { METHOD } from "constant/method";
-import { ROUTER } from "constant/router";
+import { METHOD } from "../../../constant/method";
+import { ROUTER } from "../../../constant/router";
 
 import {
   handlerRestuarantDELETE,
   handlerRestuarantGETID,
   handlerRestuarantPUT,
-} from "routes/restuarants";
+} from "../../../routes/restuarants";
 
 export default async function handler(req, res) {
   // Set CORS headers to allow requests from any origin

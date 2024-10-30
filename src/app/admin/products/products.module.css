@@ -136,3 +136,50 @@
     color: #C7C7C7;
     cursor: default;
 }
+
+.loginFirstButton {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #C035A2;
+    color: #fff;
+    font-weight: bold;
+    border: 2px solid #fff;
+}
+
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .products {
+        width: 100%;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .productItem {
+        width: 80%;
+        height: 300px;
+    }
+
+    .productImage {
+        width: 95%;
+    }
+
+    .productItem:hover {
+        width: 80%;
+        height: 300px;
+    }
+
+    .editButton {
+        z-index: 99;
+    }
+
+    .restaurantTypeDiv h2 {
+        width: 100px;
+    }
+
+}

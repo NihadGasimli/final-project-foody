@@ -1,12 +1,12 @@
 // pages/api/auth/signin.js
 
-import admin from "configs/firebaseAdmin";
-import { ROUTER } from "constant/router";
-import { addData } from "helper/addData";
-import { getQueryData } from "helper/getQueryData";
-import { enableCors } from "utils/enableCors";
-import { generateJWT, generateRefreshToken } from "utils/jwt";
-import { comparePasswords } from "utils/passwordHash";
+import admin from "../../../configs/firebaseAdmin";
+import { ROUTER } from "../../../constant/router";
+import { addData } from "../../../helper/addData";
+import { getQueryData } from "../../../helper/getQueryData";
+import { enableCors } from "../../../utils/enableCors";
+import { generateJWT, generateRefreshToken } from "../../../utils/jwt";
+import { comparePasswords } from "../../../utils/passwordHash";
 
 async function handler(req, res) {
   if (req.method == "GET") {

@@ -1,6 +1,6 @@
-import { METHOD } from "constant/method";
-import { ROUTER } from "constant/router";
-import { handlerDeleteProductCard } from "routes/basket";
+import { METHOD } from "../../../constant/method";
+import { ROUTER } from "../../../constant/router";
+import { handlerDeleteProductCard } from "../../../routes/basket";
 
 export default async function handler(req, res) {
   console.log(req.body);

@@ -1,7 +1,7 @@
-import { METHOD } from "constant/method";
-import { ROUTER } from "constant/router";
+import { METHOD } from "../../../constant/method";
+import { ROUTER } from "../../../constant/router";
 
-import { handlerCategoryGET, handlerCategoryPOST } from "routes/category";
+import { handlerCategoryGET, handlerCategoryPOST } from "../../../routes/category";
 
 export default async function handler(req, res) {
   // Set CORS headers to allow requests from any origin

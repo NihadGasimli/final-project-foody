@@ -1,9 +1,9 @@
 // signup.js
-import admin from 'configs/firebaseAdmin';
-import { ROUTER } from 'constant/router';
-import { addData } from 'helper/addData';
-import { enableCors } from 'utils/enableCors';
-import { passwordHash } from 'utils/passwordHash';
+import admin from '../../../configs/firebaseAdmin';
+import { ROUTER } from '../../../constant/router';
+import { addData } from '../../../helper/addData';
+import { enableCors } from '../../../utils/enableCors';
+import { passwordHash } from '../../../utils/passwordHash';
 
 async function handler(req, res) {
   if (req.method === 'POST') {

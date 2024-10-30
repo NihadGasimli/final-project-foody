@@ -1,6 +1,6 @@
-import { METHOD } from "constant/method";
-import { ROUTER } from "constant/router";
-import { handlerUploadPOST } from "routes/uploads";
+import { METHOD } from "../../../constant/method";
+import { ROUTER } from "../../../constant/router";
+import { handlerUploadPOST } from "../../../routes/uploads";
 
 export const config = {
   api: {

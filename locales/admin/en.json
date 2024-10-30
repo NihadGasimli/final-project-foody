@@ -1,0 +1,255 @@
+{
+    "header": {
+        "addProduct": "+ ADD PRODUCT"
+    },
+    "asideMenu": {
+        "dashboard": "Dashboard",
+        "products": "Products",
+        "restaurants": "Restaurants",
+        "category": "Categories",
+        "orders": "Orders",
+        "offer": "Offer",
+        "logout": "Logout"
+    },
+    "dashboard": {
+        "orders": "Orders",
+        "totalSalary": "Total Salary",
+        "offers": "Offers",
+        "assignedItems": "Assigned Action Items"
+    },
+    "products": {
+        "products": "Products",
+        "categoryType": "Category Type",
+        "categoryType_all": "All"
+    },
+    "restaurants": {
+        "restaurants": "Restaurants",
+        "categoryType": "Category Type",
+        "categoryType_all": "All",
+        "addRestaurant": "+ADD RESTAURANT"
+    },
+    "category": {
+        "category": "Categories",
+        "addCategory": "+ADD CATEGORY",
+        "image": "Image",
+        "name": "Name",
+        "slug": "Slug"
+    },
+    "orders": {
+        "orders": "Orders",
+        "time": "Time",
+        "deliveryAddress": "Delivery Address",
+        "amount": "Amount",
+        "paymentMethod": "Payment Method",
+        "contact": "Contact",
+        "showButton": "Show",
+        "deleteButton": "Delete",
+        "image": "Image",
+        "name": "Name",
+        "price": "Price $",
+        "count": "Count"
+    },
+    "offers": {
+        "offers": "Offers",
+        "addOffer": "+ADD OFFER",
+        "image": "Image",
+        "title": "Title",
+        "description": "Description"
+    },
+    "login": {
+        "welcomeAdmin": "Welcome Admin",
+        "username": "Username",
+        "password": "Password",
+        "signin": "Sign in",
+        "errors": {
+            "username": "Please write username",
+            "password": "Please write password"
+        }
+    },
+    "loginFirst": "Please login first!",
+    "asideModal": {
+        "addProduct": {
+            "heading": "Add product",
+            "uploadImage": "Upload your product image",
+            "uploadText": "Upload",
+            "secondHeading": "Add your product description and necessary information",
+            "form": {
+                "name": "Name",
+                "description": "Description",
+                "price": "Price",
+                "restaurants": "Restaurants",
+                "placeholders": {
+                    "name": "Name of product",
+                    "description": "Description of product",
+                    "price": "Price of product",
+                    "restaurants": "Select restaurant"
+                }
+            },
+            "cancelButton": "Cancel",
+            "confirmButton": "Create Product",
+            "errors": {
+                "image": "Please select product image",
+                "name": "Please write product name",
+                "description": "Please write product descriotion",
+                "price": "Please write product price",
+                "restaurants": "Please select restaurant type"
+            }
+        },
+        "editProduct": {
+            "heading": "Edit product",
+            "uploadImage": "Upload your product image",
+            "uploadText": "Upload",
+            "secondHeading": "Edit your product description and necessary information",
+            "form": {
+                "name": "Name",
+                "description": "Description",
+                "price": "Price",
+                "restaurants": "Restaurants",
+                "placeholders": {
+                    "name": "Name of product",
+                    "description": "Description of product",
+                    "price": "Price of product",
+                    "restaurants": "Select restaurant"
+                }
+            },
+            "cancelButton": "Cancel",
+            "confirmButton": "Edit Product"
+        },
+        "addRestaurant": {
+            "heading": "Add Restaurant",
+            "uploadImage": "Upload your restaurant image",
+            "uploadText": "Upload",
+            "secondHeading": "Add your restaurant description and necessary information",
+            "form": {
+                "name": "Name",
+                "cuisine": "Cuisine",
+                "deliveryPrice": "Delivery Price $",
+                "deliveryMin": "Delivery Min",
+                "address": "Address",
+                "category": "Category",
+                "slug": "Slug",
+                "placeholders": {
+                    "name": "Name of restaurant",
+                    "cuisine": "Fast food, Drink, Ice Cream",
+                    "deliveryPrice": "ex. 1.2",
+                    "deliveryMin": "ex. 6",
+                    "address": "Nizami street 45, Baku, Azerbaijan",
+                    "category": "Select category",
+                    "slug": "Restaurant Slug"
+                }
+            },
+            "cancelButton": "Cancel",
+            "confirmButton": "Add Restaurant",
+            "errors": {
+                "image": "Please select restaurant image",
+                "name": "Please write restaurant name",
+                "cuisine": "Please write restaurant cuisine",
+                "deliveryPrice": "Please write delivery price",
+                "deliveryMin": "Please write delivery time",
+                "address": "Please write restaurant address",
+                "category": "Please select restaurant category",
+                "slug": "Please write restaurant slug"
+            }
+        },
+        "editRestaurant": {
+            "heading": "Edit Restaurant",
+            "uploadImage": "Upload your restaurant image",
+            "uploadText": "Upload",
+            "secondHeading": "Edit your restaurant information",
+            "form": {
+                "name": "Name",
+                "cuisine": "Cuisine",
+                "deliveryPrice": "Delivery Price $",
+                "deliveryMin": "Delivery Min",
+                "address": "Address",
+                "category": "Category",
+                "slug": "Slug",
+                "placeholders": {
+                    "name": "Name of restaurant",
+                    "cuisine": "Fast food, Drink, Ice Cream",
+                    "deliveryPrice": "ex. 1.2",
+                    "deliveryMin": "ex. 6",
+                    "address": "Nizami street 45, Baku, Azerbaijan",
+                    "category": "Select category",
+                    "slug": "Restaurant Slug"
+                }
+            },
+            "cancelButton": "Cancel",
+            "confirmButton": "Edit Restaurant"
+        },
+        "addCategory": {
+            "heading": "Add category",
+            "uploadImage": "Upload category image",
+            "uploadText": "Upload",
+            "secondHeading": "Add your category information",
+            "form": {
+                "name": "Name",
+                "slug": "Slug",
+                "placeholders": {
+                    "name": "Name of category",
+                    "slug": "Slug of category"
+                }
+            },
+            "cancelButton": "Cancel",
+            "confirmButton": "Add Category",
+            "errors": {
+                "image": "Please select category image",
+                "name": "Please write category name",
+                "slug": "Please write category slug"
+            }
+        },
+        "editCategory": {
+            "heading": "Edit category",
+            "uploadImage": "Upload category image",
+            "uploadText": "Upload",
+            "secondHeading": "Edit your category information",
+            "form": {
+                "name": "Name",
+                "slug": "Slug",
+                "placeholders": {
+                    "name": "Name of category",
+                    "slug": "Slug of category"
+                }
+            },
+            "cancelButton": "Cancel",
+            "confirmButton": "Update Category"
+        },
+        "addOffer": {
+            "heading": "Add Offer",
+            "uploadImage": "Upload image",
+            "uploadText": "Upload",
+            "secondHeading": "Add your offer information",
+            "form": {
+                "title": "Title",
+                "description": "Description",
+                "placeholders": {
+                    "title": "Name of offer",
+                    "description": "Description of offer"
+                }
+            },
+            "cancelButton": "Cancel",
+            "confirmButton": "Create Offer",
+            "errors": {
+                "image": "Please select offer image",
+                "name": "Please write offer title",
+                "description": "Please write offer descriotion"
+            }
+        },
+        "editOffer": {
+            "heading": "Edit Restaurant",
+            "uploadImage": "Upload image",
+            "uploadText": "Upload",
+            "secondHeading": "Edit your offer information",
+            "form": {
+                "title": "Title",
+                "description": "Description",
+                "placeholders": {
+                    "title": "Name of offer",
+                    "description": "Description of offer"
+                }
+            },
+            "cancelButton": "Cancel",
+            "confirmButton": "Edit Offer"
+        }
+    }
+}

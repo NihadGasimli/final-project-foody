@@ -1,6 +1,6 @@
-import admin from "configs/firebaseAdmin";
-import { ROUTER } from "constant/router";
-import { verifyJWT } from "utils/jwt";
+import admin from "../../../configs/firebaseAdmin";
+import { ROUTER } from "../../../constant/router";
+import { verifyJWT } from "../../../utils/jwt";
 
 export default async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");

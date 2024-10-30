@@ -4,6 +4,7 @@
 .container {
     width: 100%;
     height: 100vh;
+    /* height: 100vh; */
     background-color: #1e1e30;
 }
 
@@ -11,6 +12,13 @@
     width: 102px;
     height: 22px;
     margin: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 40px;
 }
 
 .loginPanel {
@@ -56,6 +64,7 @@
     margin-bottom: 10px;
     font-weight: 700;
     color: #C7C7C7;
+    text-align: center;
 }
 
 .leftSide button {
@@ -76,7 +85,17 @@
     border: 2px solid #C035A2;
 }
 
-.leftSide input {
+.usernameDiv,
+.passwordDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.usernameDiv input,
+.passwordDiv input {
     width: 80%;
     height: 50px;
     background-color: #5A5B70;
@@ -90,5 +109,102 @@
 
 .leftSide input::placeholder {
     color: #C7C7C7;
+}
 
+.errorText {
+    color: #f00;
+}
+
+.loginFirstButton {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #C035A2;
+    color: #fff;
+    font-weight: bold;
+    border: 2px solid #fff;
+}
+
+.dropdown {
+    position: relative;
+    font-family: Arial, sans-serif;
+    border: 0;
+    cursor: pointer;
+}
+
+.dropdown_content {
+    padding: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    z-index: 99;
+    border-radius: 5px;
+    width: 100%;
+    transition: opacity 0.7s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.flag {
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .rightSide {
+        background-color: transparent;
+    }
+
+    .loginPanel {
+        flex-direction: column-reverse;
+        height: 400px;
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+    }
+
+    .loginPanelImage {
+        width: 174px;
+        height: 154px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .leftSide,
+    .rightSide {
+        margin: 0;
+        padding: 0;
+    }
+
+    .leftSide {
+        background-color: transparent;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        height: 200px;
+    }
+
+    .leftSide h1 {
+        font-size: 24px;
+        width: 220px;
+    }
+
+    .leftSide input,
+    .leftSide button {
+        width: 208px;
+        height: 29px;
+        font-size: 14px;
+    }
+
+    .leftSide button{
+        height: 35px;
+    }
+
+    .logo {
+        width: 92px;
+        height: 34px;
+        margin: 20px;
+    }
 }
