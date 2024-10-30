@@ -1,10 +1,10 @@
-import { addData } from "helper/addData";
-import { deleteData } from "helper/deleteData";
-import { getAllData } from "helper/getAllData";
-import { getDataID } from "helper/getDataID";
-import { uptData } from "helper/uptData";
-import { Product } from "models/Product";
-import { response } from "utils/response";
+import { addData } from "../helper/addData";
+import { deleteData } from "../helper/deleteData";
+import { getAllData } from "../helper/getAllData";
+import { getDataID } from "../helper/getDataID";
+import { uptData } from "../helper/uptData";
+import { Product } from "../models/Product";
+import { response } from "../utils/response";
 
 export async function handlerProductGET(req, res, col) {
   try {

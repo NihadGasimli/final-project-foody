@@ -1,5 +1,5 @@
 import { convertSnapshotToArray } from "./convertSnapsToArray";
-import { firestore } from "configs/firebaseAdmin";
+import { firestore } from "../configs/firebaseAdmin";
 
 export async function getAllData(col) {
   const snapshot = await firestore.collection(col).get();

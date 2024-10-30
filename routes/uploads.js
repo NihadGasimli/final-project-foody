@@ -1,5 +1,5 @@
-import { uploadFile } from "helper/uploadFile";
-import { parseForm } from "utils/parseForm";
+import { uploadFile } from "../helper/uploadFile";
+import { parseForm } from "../utils/parseForm";
 
 export async function handlerUploadPOST(req, res, col) {
   try {

@@ -1,11 +1,9 @@
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
     domains: ['encrypted-tbn0.gstatic.com'],
   },
   reactStrictMode: true,
-  swcMinify: true,
   async headers() {
     return [
       {

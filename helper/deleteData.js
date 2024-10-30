@@ -1,4 +1,4 @@
-import { firestore } from "configs/firebaseAdmin";
+import { firestore } from "../configs/firebaseAdmin";
 
 export async function deleteData(col, id) {
   try {

@@ -1,10 +1,10 @@
-import { addData } from "helper/addData";
-import { deleteData } from "helper/deleteData";
-import { getAllData } from "helper/getAllData";
-import { getDataID } from "helper/getDataID";
-import { uptData } from "helper/uptData";
-import { Category } from "models/Category";
-import { response } from "utils/response";
+import { addData } from "../helper/addData";
+import { deleteData } from "../helper/deleteData";
+import { getAllData } from "../helper/getAllData";
+import { getDataID } from "../helper/getDataID";
+import { uptData } from "../helper/uptData";
+import { Category } from "../models/Category";
+import { response } from "../utils/response";
 
 export async function handlerCategoryGET(req, res, col) {
   try {

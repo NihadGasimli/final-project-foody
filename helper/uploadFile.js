@@ -1,4 +1,4 @@
-import { fileStorage } from "configs/firebase";
+import { fileStorage } from "../configs/firebase";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import fs from "fs";
 

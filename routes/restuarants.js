@@ -1,12 +1,12 @@
-import { ROUTER } from "constant/router";
-import { addData } from "helper/addData";
-import { deleteData } from "helper/deleteData";
-import { getAllData } from "helper/getAllData";
-import { getDataID } from "helper/getDataID";
-import { getQueryData } from "helper/getQueryData";
-import { uptData } from "helper/uptData";
-import { Restaurant } from "models/Restaurant";
-import { response } from "utils/response";
+import { ROUTER } from "../constant/router";
+import { addData } from "../helper/addData";
+import { deleteData } from "../helper/deleteData";
+import { getAllData } from "../helper/getAllData";
+import { getDataID } from "../helper/getDataID";
+import { getQueryData } from "../helper/getQueryData";
+import { uptData } from "../helper/uptData";
+import { Restaurant } from "../models/Restaurant";
+import { response } from "../utils/response";
 
 export async function handlerRestuarantGETID(req, res, col) {
   try {

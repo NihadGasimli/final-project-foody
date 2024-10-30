@@ -1,4 +1,4 @@
-import { firestore } from "configs/firebaseAdmin";
+import { firestore } from "../configs/firebaseAdmin";
 import { convertSnapshotToArray } from "./convertSnapsToArray";
 
 export async function getQueryData(col, key, id, condition = "==") {
